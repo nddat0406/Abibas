@@ -3,7 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/Login.jsp</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/User/loginRegister.jsp</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/Common/mobileMenu.jsp</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Controller/user.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/Common/headerTop.jsp</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/dal/UserDAO.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/Common/HomePageCommon/HomeFooter.jsp</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/Common/miniCart.jsp</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/Common/modalMessage.jsp</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/Common/footer.jsp</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/Common/HomePageCommon/homeHeader.jsp</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/Common/HomePageCommon/HomeProductModal.jsp</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/Admin/adminHome.jsp</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/User/Home.jsp</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/Common/headerBottom.jsp</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/Common/headerFull.jsp</file>
         </group>
     </open-files>
 </project-private>
