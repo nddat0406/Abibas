@@ -4,6 +4,8 @@
     Author     : HP
 --%>
 
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div class="sidebar-cart-active">
     <div class="sidebar-cart-all">
@@ -11,36 +13,28 @@
         <div class="cart-content">
             <h3>Shopping Cart</h3>
             <ul>
-                <li class="single-product-cart">
-                    <div class="cart-img">
-                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/cart/cart-1.jpg" alt=""></a>
-                    </div>
-                    <div class="cart-title">
-                        <h4><a href="#">Simple Black T-Shirt</a></h4>
-                        <span> 1 × $49.00	</span>
-                    </div>
-                    <div class="cart-delete">
-                        <a href="#">×</a>
-                    </div>
-                </li>
-                <li class="single-product-cart">
-                    <div class="cart-img">
-                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/cart/cart-2.jpg" alt=""></a>
-                    </div>
-                    <div class="cart-title">
-                        <h4><a href="#">Norda Backpack</a></h4>
-                        <span> 1 × $49.00	</span>
-                    </div>
-                    <div class="cart-delete">
-                        <a href="#">×</a>
-                    </div>
-                </li>
+                <c:forEach items="${sessionScope.cart.items}" var="item">
+                    <li class="single-product-cart">
+                        <div class="cart-img">
+                            <a href="#"><img src="${item.product.productImg}" alt=""></a>
+                        </div>
+                        <div class="cart-title">
+                            <h4><a href="#">${item.product.productName}</a></h4>
+                            <span> ${item.quantity} × ${item.product.getProductPrice()}	</span>
+                        </div>
+                        <div class="cart-delete">
+                            <a href="#">×</a>
+                        </div>
+                    </li>
+                </c:forEach>
             </ul>
             <div class="cart-total">
-                <h4>Subtotal: <span>$170.00</span></h4>
+                <h4>Subtotal: <span> 
+                        <fmt:setLocale value = "en_US"/>
+                        <fmt:formatNumber  value="${sessionScope.cart.getTotalMoney()}" type="currency"></fmt:formatNumber> </span></h4>
             </div>
             <div class="cart-checkout-btn">
-                <a class="btn-hover cart-btn-style" href="cart.html">view cart</a>
+                <a class="btn-hover cart-btn-style" href="${pageContext.request.contextPath}/Cart">view cart</a>
                 <a class="no-mrg btn-hover cart-btn-style" href="checkout.html">checkout</a>
             </div>
         </div>
