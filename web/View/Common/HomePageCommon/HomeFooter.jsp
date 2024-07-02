@@ -11,11 +11,10 @@
             <div class="footer-menu footer-menu-hover-border">
                 <nav>
                     <ul>
-                        <li><a class="active" href="Home.jsp">home</a></li>
+                        <li><a class="active" href="${pageContext.request.contextPath}/Home">Home</a></li>
                         <li><a href="shop.html">Shop</a></li>
                         <li><a href="shop.html">Product </a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="blog.html">Blog.</a></li>
                     </ul>
                 </nav>
             </div>
@@ -39,9 +38,9 @@
                         <div class="footer-logo footer-logo-mrg">
                             <a href="#"><img style="width: 30%" src="${pageContext.request.contextPath}/assets/images/logo/logo-2.png" alt="logo"></a>
                         </div>
-                        <p>295 Madison Ave Str, Floor 25th, New York, NY 10010 , USA</p>
-                        <p>(+0024)-877-932-0563</p>
-                        <p>hello@norda.com</p>
+                        <p>Hoa Lac Hi-tech Park, km 29, Đại lộ, Thăng Long, Hà Nội</p>
+                        <p>(+84)123456789</p>
+                        <p>datndhe187230@fpt.edu.vn</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3">
