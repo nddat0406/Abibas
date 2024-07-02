@@ -1,4 +1,3 @@
-
 <%-- 
     Document   : Home
     Created on : Jun 16, 2024, 8:49:59 PM
@@ -38,15 +37,7 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/plugins/magnific-popup.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/plugins/jquery-ui.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
-        <script>
 
-            function getModalInfor(pID) {
-                $('#myModal').modal('show');
-                $('#modalContent').load("${pageContext.request.contextPath}/Product?action=getModalInfo&productID=" + pID + " #modalContent");
-            }
-            ;
-
-        </script>
     </head>
 
     <body class="bg-gray-5">
@@ -67,7 +58,7 @@
                                         <h1 class="animated"><span>Realtree</span> <br>Print Belt Bagn</h1>
                                         <p class="animated">Lorem ipsum dolor sit amet, consectetur adipis elit. Nunc imperdiet, nulla.</p>
                                         <div class="btn-style-2">
-                                            <a class="animated" href="ProductDetail.jsp">explore now <i class="icon-arrow-right"></i></a>
+                                            <a class="animated" href="product-details.html">explore now <i class="icon-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -82,7 +73,7 @@
                                         <h1 class="animated"><span>Realtree</span> <br>Print Belt Bagn</h1>
                                         <p class="animated">Lorem ipsum dolor sit amet, consectetur adipis elit. Nunc imperdiet, nulla.</p>
                                         <div class="btn-style-2">
-                                            <a class="animated" href="ProductDetail.jsp">explore now <i class="icon-arrow-right"></i></a>
+                                            <a class="animated" href="product-details.html">explore now <i class="icon-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -97,13 +88,13 @@
                         <div class="col-lg-6 col-md-6">
                             <div class="banner-wrap mb-30">
                                 <div class="banner-img banner-img-zoom">
-                                    <a href="ProductDetail.jsp"><img src="${pageContext.request.contextPath}/assets/images/banner/banner-10.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="${pageContext.request.contextPath}/assets/images/banner/banner-10.jpg" alt=""></a>
                                 </div>
                                 <div class="banner-content-11">
                                     <h2><span>Zara</span> Pattern Boxed <br>Underwear</h2>
                                     <p>Stretch, & Fress cool</p>
                                     <div class="btn-style-4">
-                                        <a class="hover-red" href="ProductDetail.jsp">Shop now <i class="icon-arrow-right"></i></a>
+                                        <a class="hover-red" href="product-details.html">Shop now <i class="icon-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -111,13 +102,13 @@
                         <div class="col-lg-6 col-md-6">
                             <div class="banner-wrap mb-30">
                                 <div class="banner-img banner-img-zoom">
-                                    <a href="ProductDetail.jsp"><img src="${pageContext.request.contextPath}/assets/images/banner/banner-11.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="${pageContext.request.contextPath}/assets/images/banner/banner-11.jpg" alt=""></a>
                                 </div>
                                 <div class="banner-content-11">
                                     <h2><span>Basic</span> Color<br>Caps</h2>
                                     <p>Less is more!</p>
                                     <div class="btn-style-4">
-                                        <a class="hover-red" href="ProductDetail.jsp">Shop now <i class="icon-arrow-right"></i></a>
+                                        <a class="hover-red" href="product-details.html">Shop now <i class="icon-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -202,12 +193,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-13.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -221,7 +213,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$20.50</span>
                                                 </div>
@@ -237,7 +229,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$20.50</span>
                                                 </div>
@@ -250,14 +242,14 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-14.jpg" alt="">
                                                 </a>
                                                 <span class="pro-badge left bg-red">-20%</span>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -271,7 +263,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span class="new-price">$35.45</span>
                                                     <span class="old-price">$45.80</span>
@@ -288,7 +280,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span class="new-price">$35.45</span>
                                                     <span class="old-price">$45.80</span>
@@ -302,13 +294,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-15.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -322,7 +314,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$35.45</span>
                                                 </div>
@@ -338,7 +330,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$35.45</span>
                                                 </div>
@@ -351,23 +343,23 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-16.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$45.50</span>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 product-content-position text-center">
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$45.50</span>
                                                 </div>
@@ -380,25 +372,25 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-17.jpg" alt="">
                                                 </a>
                                                 <span class="pro-badge left bg-red">-20%</span>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span class="new-price">$35.45</span>
                                                     <span class="old-price">$45.80</span>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 product-content-position text-center">
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span class="new-price">$35.45</span>
                                                     <span class="old-price">$45.80</span>
@@ -412,13 +404,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-18.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -432,7 +424,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$55.50</span>
                                                 </div>
@@ -448,7 +440,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$55.50</span>
                                                 </div>
@@ -461,13 +453,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-19.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -481,7 +473,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$65.50</span>
                                                 </div>
@@ -497,7 +489,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$65.50</span>
                                                 </div>
@@ -510,13 +502,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-20.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -530,7 +522,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$75.50</span>
                                                 </div>
@@ -546,7 +538,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$75.50</span>
                                                 </div>
@@ -563,13 +555,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-20.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -583,7 +575,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$20.50</span>
                                                 </div>
@@ -599,7 +591,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$20.50</span>
                                                 </div>
@@ -612,14 +604,14 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-19.jpg" alt="">
                                                 </a>
                                                 <span class="pro-badge left bg-red">-20%</span>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -633,7 +625,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span class="new-price">$35.45</span>
                                                     <span class="old-price">$45.80</span>
@@ -650,7 +642,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span class="new-price">$35.45</span>
                                                     <span class="old-price">$45.80</span>
@@ -664,13 +656,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-18.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -684,7 +676,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$35.45</span>
                                                 </div>
@@ -700,7 +692,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$35.45</span>
                                                 </div>
@@ -713,23 +705,23 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-17.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$45.50</span>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 product-content-position text-center">
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$45.50</span>
                                                 </div>
@@ -742,25 +734,25 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-16.jpg" alt="">
                                                 </a>
                                                 <span class="pro-badge left bg-red">-20%</span>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span class="new-price">$35.45</span>
                                                     <span class="old-price">$45.80</span>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 product-content-position text-center">
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span class="new-price">$35.45</span>
                                                     <span class="old-price">$45.80</span>
@@ -774,13 +766,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-15.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -794,7 +786,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$55.50</span>
                                                 </div>
@@ -810,7 +802,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$55.50</span>
                                                 </div>
@@ -823,13 +815,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-14.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -843,7 +835,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$65.50</span>
                                                 </div>
@@ -859,7 +851,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$65.50</span>
                                                 </div>
@@ -872,13 +864,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-13.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -892,7 +884,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$75.50</span>
                                                 </div>
@@ -908,7 +900,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$75.50</span>
                                                 </div>
@@ -925,13 +917,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-16.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -945,7 +937,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$20.50</span>
                                                 </div>
@@ -961,7 +953,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$20.50</span>
                                                 </div>
@@ -974,14 +966,14 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-15.jpg" alt="">
                                                 </a>
                                                 <span class="pro-badge left bg-red">-20%</span>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -995,7 +987,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span class="new-price">$35.45</span>
                                                     <span class="old-price">$45.80</span>
@@ -1012,7 +1004,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span class="new-price">$35.45</span>
                                                     <span class="old-price">$45.80</span>
@@ -1026,13 +1018,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-14.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -1046,7 +1038,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$35.45</span>
                                                 </div>
@@ -1062,7 +1054,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$35.45</span>
                                                 </div>
@@ -1075,23 +1067,23 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-13.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$45.50</span>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 product-content-position text-center">
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$45.50</span>
                                                 </div>
@@ -1104,25 +1096,25 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-20.jpg" alt="">
                                                 </a>
                                                 <span class="pro-badge left bg-red">-20%</span>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span class="new-price">$35.45</span>
                                                     <span class="old-price">$45.80</span>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 product-content-position text-center">
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span class="new-price">$35.45</span>
                                                     <span class="old-price">$45.80</span>
@@ -1136,13 +1128,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-19.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -1156,7 +1148,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$55.50</span>
                                                 </div>
@@ -1172,7 +1164,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$55.50</span>
                                                 </div>
@@ -1185,13 +1177,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-18.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -1205,7 +1197,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$65.50</span>
                                                 </div>
@@ -1221,7 +1213,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$65.50</span>
                                                 </div>
@@ -1234,13 +1226,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-17.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -1254,7 +1246,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$75.50</span>
                                                 </div>
@@ -1270,7 +1262,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$75.50</span>
                                                 </div>
@@ -1287,13 +1279,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-14.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -1307,7 +1299,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$20.50</span>
                                                 </div>
@@ -1323,7 +1315,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$20.50</span>
                                                 </div>
@@ -1336,14 +1328,14 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-13.jpg" alt="">
                                                 </a>
                                                 <span class="pro-badge left bg-red">-20%</span>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -1357,7 +1349,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span class="new-price">$35.45</span>
                                                     <span class="old-price">$45.80</span>
@@ -1374,7 +1366,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span class="new-price">$35.45</span>
                                                     <span class="old-price">$45.80</span>
@@ -1388,13 +1380,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-16.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -1408,7 +1400,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$35.45</span>
                                                 </div>
@@ -1424,7 +1416,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$35.45</span>
                                                 </div>
@@ -1437,23 +1429,23 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-15.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$45.50</span>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 product-content-position text-center">
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$45.50</span>
                                                 </div>
@@ -1466,25 +1458,25 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-18.jpg" alt="">
                                                 </a>
                                                 <span class="pro-badge left bg-red">-20%</span>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span class="new-price">$35.45</span>
                                                     <span class="old-price">$45.80</span>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 product-content-position text-center">
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span class="new-price">$35.45</span>
                                                     <span class="old-price">$45.80</span>
@@ -1498,13 +1490,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-17.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -1518,7 +1510,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$55.50</span>
                                                 </div>
@@ -1534,7 +1526,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$55.50</span>
                                                 </div>
@@ -1547,13 +1539,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-20.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -1567,7 +1559,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$65.50</span>
                                                 </div>
@@ -1583,7 +1575,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$65.50</span>
                                                 </div>
@@ -1596,13 +1588,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-19.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -1616,7 +1608,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$75.50</span>
                                                 </div>
@@ -1632,7 +1624,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$75.50</span>
                                                 </div>
@@ -1649,13 +1641,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-15.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -1669,7 +1661,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$20.50</span>
                                                 </div>
@@ -1685,7 +1677,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$20.50</span>
                                                 </div>
@@ -1698,14 +1690,14 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-13.jpg" alt="">
                                                 </a>
                                                 <span class="pro-badge left bg-red">-20%</span>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -1719,7 +1711,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span class="new-price">$35.45</span>
                                                     <span class="old-price">$45.80</span>
@@ -1736,7 +1728,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span class="new-price">$35.45</span>
                                                     <span class="old-price">$45.80</span>
@@ -1750,13 +1742,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-16.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -1770,7 +1762,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$35.45</span>
                                                 </div>
@@ -1786,7 +1778,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$35.45</span>
                                                 </div>
@@ -1799,23 +1791,23 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-14.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$45.50</span>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 product-content-position text-center">
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$45.50</span>
                                                 </div>
@@ -1828,25 +1820,25 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-19.jpg" alt="">
                                                 </a>
                                                 <span class="pro-badge left bg-red">-20%</span>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span class="new-price">$35.45</span>
                                                     <span class="old-price">$45.80</span>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 product-content-position text-center">
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span class="new-price">$35.45</span>
                                                     <span class="old-price">$45.80</span>
@@ -1860,13 +1852,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-17.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -1880,7 +1872,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$55.50</span>
                                                 </div>
@@ -1896,7 +1888,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$55.50</span>
                                                 </div>
@@ -1909,13 +1901,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-20.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -1929,7 +1921,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$65.50</span>
                                                 </div>
@@ -1945,7 +1937,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$65.50</span>
                                                 </div>
@@ -1958,13 +1950,13 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="single-product-wrap mb-35">
                                             <div class="product-img product-img-zoom mb-15">
-                                                <a href="ProductDetail.jsp">
+                                                <a href="product-details.html">
                                                     <img src="${pageContext.request.contextPath}/assets/images/product/product-18.jpg" alt="">
                                                 </a>
                                                 <div class="product-action-2 tooltip-style-2">
                                                     <button title="Wishlist"><i class="icon-heart"></i></button>
                                                     <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-
+                                                    <button title="Compare"><i class="icon-refresh"></i></button>
                                                 </div>
                                             </div>
                                             <div class="product-content-wrap-2 text-center">
@@ -1978,7 +1970,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$75.50</span>
                                                 </div>
@@ -1994,7 +1986,7 @@
                                                     </div>
                                                     <span>(2)</span>
                                                 </div>
-                                                <h3><a href="ProductDetail.jsp">Make Thing Happen T-Shirt</a></h3>
+                                                <h3><a href="product-details.html">Make Thing Happen T-Shirt</a></h3>
                                                 <div class="product-price-2">
                                                     <span>$75.50</span>
                                                 </div>
@@ -2014,43 +2006,69 @@
                 <div class="container">
                     <div class="section-title-2 text-center mb-45">
                         <h2><span>New</span> Arrivals</h2>
-                        <p>Chúng tôi luôn cập nhật những xu hướng mới nhất.</p>
+                        <p>We alway up to date new arrivals follows trending</p>
                     </div>
                     <div class="product-slider-active dot-style-2 dot-style-2-position-static dot-style-2-mrg-1 dot-style-2-active-black">
-                        <c:forEach items="${requestScope.top10}" var="newP">
-
-
-                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                                <div class="single-product-wrap mb-35">
-                                    <div class="product-img product-img-zoom mb-15">
-                                        <a href="${pageContext.request.contextPath}/Product?productId=${newP.productID}&action=productdetail">
-                                            <img src="${newP.productImg}" alt="">
-                                        </a>
-                                        <div class="product-action-2 tooltip-style-2">
-                                            <button title="Wishlist"><i class="icon-heart"></i></button>
-                                            <button title="Quick View" value="${newP.productID}" data-bs-toggle="modal" data-bs-target="#myModal" onclick="getModalInfor(this.value)"><i class="icon-size-fullscreen icons"></i></button>
-
-                                        </div>
-                                    </div>
-                                    <div class="product-content-wrap-2 text-center">
-                                        <h3><a href="${pageContext.request.contextPath}/Product?productId=${newP.productID}&action=productdetail">${newP.productName}</a></h3>
-                                        <div class="product-price-2">
-                                            <span>${newP.productPrice}</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-content-wrap-2 product-content-position text-center">
-
-                                        <h3><a href="${pageContext.request.contextPath}/Product?productId=${newP.productID}&action=productdetail">${newP.productName}</a></h3>
-                                        <div class="product-price-2">
-                                            <span>${newP.productPrice}</span>
-                                        </div>
-                                        <div class="pro-add-to-cart">
-                                            <button title="Add to Cart">Add To Cart</button>
-                                        </div>
-                                    </div>
+                        <div class="product-plr-1">
+                            <div class="single-product-wrap mb-35">
+                                <div class="product-img product-img-zoom mb-20">
+                                    <a href="product-details.html">
+                                        <img src="${pageContext.request.contextPath}/assets/images/product/product-9.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="product-content-2 text-center">
+                                    <h3><a href="product-details.html"><span class="blod">Men</span> Clothings <span class="available-product">(56)</span></a></h3>
                                 </div>
                             </div>
-                        </c:forEach>
+                        </div>
+                        <div class="product-plr-1">
+                            <div class="single-product-wrap mb-35">
+                                <div class="product-img product-img-zoom mb-20">
+                                    <a href="product-details.html">
+                                        <img src="${pageContext.request.contextPath}/assets/images/product/product-10.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="product-content-2 text-center">
+                                    <h3><a href="product-details.html"><span class="blod">Women</span> Shoes <span class="available-product">(55)</span></a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-plr-1">
+                            <div class="single-product-wrap mb-35">
+                                <div class="product-img product-img-zoom mb-20">
+                                    <a href="product-details.html">
+                                        <img src="${pageContext.request.contextPath}/assets/images/product/product-11.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="product-content-2 text-center">
+                                    <h3><a href="product-details.html"><span class="blod">Kid</span> Caps <span class="available-product">(56)</span></a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-plr-1">
+                            <div class="single-product-wrap mb-35">
+                                <div class="product-img product-img-zoom mb-20">
+                                    <a href="product-details.html">
+                                        <img src="${pageContext.request.contextPath}/assets/images/product/product-12.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="product-content-2 text-center">
+                                    <h3><a href="product-details.html"><span class="blod">Women</span> Accessories <span class="available-product">(24)</span></a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-plr-1">
+                            <div class="single-product-wrap mb-35">
+                                <div class="product-img product-img-zoom mb-20">
+                                    <a href="product-details.html">
+                                        <img src="${pageContext.request.contextPath}/assets/images/product/product-11.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="product-content-2 text-center">
+                                    <h3><a href="product-details.html"><span class="blod">Women</span> Shoes <span class="available-product">(55)</span></a></h3>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2060,7 +2078,7 @@
                         <div class="col-lg-8 col-md-8">
                             <div class="banner-wrap banner-wrap-mrg-1 mb-30">
                                 <div class="banner-img banner-img-zoom">
-                                    <a href="ProductDetail.jsp"><img src="${pageContext.request.contextPath}/assets/images/banner/banner-12.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="${pageContext.request.contextPath}/assets/images/banner/banner-12.jpg" alt=""></a>
                                 </div>
                                 <div class="banner-content-12">
                                     <h2>Theloke Charm <br>Perfume</h2>
@@ -2068,7 +2086,7 @@
                                     <span>Start from</span>
                                     <h3>$59.25</h3>
                                     <div class="btn-style-1">
-                                        <a class="animated btn-1-padding-4" href="ProductDetail.jsp">Shop Now</a>
+                                        <a class="animated btn-1-padding-4" href="product-details.html">Shop Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -2076,7 +2094,7 @@
                         <div class="col-lg-4 col-md-4">
                             <div class="banner-wrap banner-wrap-mrg-2 mb-30">
                                 <div class="banner-img banner-img-zoom">
-                                    <a href="ProductDetail.jsp"><img src="${pageContext.request.contextPath}/assets/images/banner/banner-13.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="${pageContext.request.contextPath}/assets/images/banner/banner-13.jpg" alt=""></a>
                                 </div>
                                 <div class="banner-content-12">
                                     <h2>Double Frame <br>Sunglasses</h2>
@@ -2087,10 +2105,36 @@
                     </div>
                 </div>
             </div>
-
+            <div class="subscribe-area pt-115 bg-white pb-120 mb-20">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-5">
+                            <div class="section-title-2">
+                                <h2><span>Keep</span> Connected</h2>
+                                <p>Get updates by subscribe our weekly newsletter</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-7">
+                            <div id="mc_embed_signup" class="subscribe-form">
+                                <form id="mc-embedded-subscribe-form" class="validate subscribe-form-style" novalidate="" target="_blank" name="mc-embedded-subscribe-form" method="post" action="https://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef">
+                                    <div id="mc_embed_signup_scroll" class="mc-form">
+                                        <input class="email" type="email" required="" placeholder="Enter your email address" name="EMAIL" value="">
+                                        <div class="mc-news" aria-hidden="true">
+                                            <input type="text" value="" tabindex="-1" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef">
+                                        </div>
+                                        <div class="clear">
+                                            <input id="mc-embedded-subscribe" class="button" type="submit" name="subscribe" value="Subscribe">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <jsp:include page="../Common/HomePageCommon/HomeFooter.jsp"></jsp:include>
                 <!-- Modal -->
-            <jsp:include page="../Common/HomeProductModal.jsp"></jsp:include>
+            <jsp:include page="../Common/HomePageCommon/HomeProductModal.jsp"></jsp:include>
                 <!-- Modal end -->
             </div>
 

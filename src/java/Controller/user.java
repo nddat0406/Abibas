@@ -67,7 +67,8 @@ public class user extends HttpServlet {
                     response.addCookie(pass);
                     response.addCookie(r);
                     if (!user.isIsAdmin()) {
-                        response.sendRedirect(request.getContextPath()+"/Home");
+
+                        response.sendRedirect("View/User/Home.jsp");
                     } else {
                         response.sendRedirect("View/Admin/adminHome.jsp");
                     }
@@ -80,7 +81,7 @@ public class user extends HttpServlet {
 
         if (action.equals("logout")) {
             request.getSession().removeAttribute("user");
-            response.sendRedirect(request.getContextPath()+"/Home");
+            response.sendRedirect("View/User/Home.jsp");
         }
         if (action.equals("register")) {
             String regisEmail = request.getParameter("user_email");

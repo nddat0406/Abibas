@@ -1,4 +1,4 @@
-
+<%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%-- 
     Document   : login-register
     Created on : Jun 16, 2024, 10:53:40 PM
@@ -71,7 +71,7 @@
                         <div class="breadcrumb-content text-center">
                             <ul>
                                 <li>
-                                    <a href="${pageContext.request.contextPath}/Home">Home</a>
+                                    <a href="Home.jsp">Home</a>
                                 </li>
                                 <li class="active">login - register </li>
                             </ul>
