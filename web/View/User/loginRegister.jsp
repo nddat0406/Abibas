@@ -72,13 +72,13 @@
                             <ul>
                                 <li>
                                     <a href="${pageContext.request.contextPath}/Home">Home</a>
-                                </li>
-                                <li class="active">login - register </li>
-                            </ul>
-                        </div>
+                            </li>
+                            <li class="active">login - register </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="login-register-area pt-115 pb-120">
+            </div>
+            <div class="login-register-area pt-115 pb-120">
                 <c:set var="cookie" value="${pageContext.request.cookies}"></c:set>
                     <div class="container">
 
@@ -123,6 +123,8 @@
                                                     <input type="password" name="password" placeholder="Password" id="pass" required="true" onkeyup="document.getElementById('repass').setCustomValidity('')">
                                                     <input type="password" name="repassword" placeholder="Re-Password" id="repass" required="true" onkeyup="this.setCustomValidity('')">
                                                     <input name="user_email" placeholder="Email" type="email" id="email" value="${param.regisEmail}">
+                                                    <input name="address" placeholder="Address" type="text">
+                                                    <input name="phone" placeholder="Phone" type="text" pattern="[0]{1}[0-9]{9}">
                                                     <div class="button-box">
                                                         <button type="submit">Register</button>
                                                     </div>
@@ -146,10 +148,12 @@
                 <jsp:include page="../Common/modalMessage.jsp"></jsp:include>
                     <script>
                         window.onload = () => {
-                            const myModal = new bootstrap.Modal('#myModel');
+                            $('#modalMessContent').text("${param.modalMess}");
+                            $('#myModelTitle').text("${param.modalTitle}");
+                            const myModal = new bootstrap.Modal('#myMessModal');
                             myModal.show();
                         };
-                    </script>
+                </script>
             </c:if>
             <jsp:include page="../Common/footer.jsp"></jsp:include>
             </div>

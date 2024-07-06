@@ -9,28 +9,25 @@ package Model;
  * @author HP
  */
 public class OrderDetail {
-    private int id;
     private int quantity;
     private int orderId;
-    private int productId;
+    private Product product;
+    private String size;
+    private String color;
 
     public OrderDetail() {
     }
 
-    public OrderDetail(int id, int quantity, int orderId, int productId) {
-        this.id = id;
+    public OrderDetail(int quantity, int orderId, Product product, String size, String color) {
         this.quantity = quantity;
         this.orderId = orderId;
-        this.productId = productId;
+        this.product = product;
+        this.size = size;
+        this.color = color;
     }
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    
 
     public int getQuantity() {
         return quantity;
@@ -48,18 +45,38 @@ public class OrderDetail {
         this.orderId = orderId;
     }
 
-    public int getProductId() {
-        return productId;
+    public Product getProduct() {
+        return product;
     }
 
-    public void setProductId(int productId) {
-        this.productId = productId;
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     @Override
     public String toString() {
-        return "OrderDetail{" + "id=" + id + ", quantity=" + quantity + ", orderId=" + orderId + ", productId=" + productId + '}';
+        return "OrderDetail{" + "quantity=" + quantity + ", orderId=" + orderId + ", product=" + product + ", size=" + size + ", color=" + color + '}';
     }
+
+
+
+    
     
     
 }

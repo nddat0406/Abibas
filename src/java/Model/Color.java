@@ -36,6 +36,11 @@ public class Color {
     public void setColor(String color) {
         this.color = color;
     }
+
+    @Override
+    public String toString() {
+        return "Color{" + "productID=" + productID + ", color=" + color + '}';
+    }
     
     
 }

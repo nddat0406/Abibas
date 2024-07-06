@@ -46,10 +46,10 @@
 /*MY CUSTOM CSS*/
 
 .shopColorBox {
-  width: 100px;
-  height: 20px;
-  border: 1px solid rgba(0, 0, 0, .2);
-  border-radius: 5px;
+    width: 100px;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 5px;
 }
 
 /*============================================*/
@@ -2157,7 +2157,7 @@ textarea:focus {
 .box-layout-width {
     display: block;
     margin: 0px auto;
-    width: 1310px;
+    width: 1460px;
 }
 @media only screen and (min-width: 1366px) and (max-width: 1600px) {
     .box-layout-width {
@@ -7626,6 +7626,10 @@ textarea:focus {
 .single-product-wrap .product-img a img {
     width: 100%;
 }
+.slick-slide .single-product-wrap .product-img a img {
+    height: 496px;
+    width: 100%;
+}
 .single-product-wrap .product-img span.pro-badge {
     position: absolute;
     top: 17px;
@@ -8540,7 +8544,7 @@ textarea:focus {
     flex-wrap: wrap;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: end;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -10545,6 +10549,7 @@ textarea:focus {
 }
 .banner-wrap .banner-img-zoom a img {
     width: 100%;
+    height: 615px;
     -webkit-transform: scale(1);
     transform: scale(1);
     -webkit-transition: all 0.5s ease 0s;
@@ -13913,7 +13918,7 @@ textarea:focus {
 .product-details-content .pro-details-size .pro-details-size-content .btn-group input.active {
     background-color: #ff2f2f;
     color: #ffffff;
-    border: 1px solid #ff2f2f;
+    border: 2px solid #ff2f2f;
 }
 .product-details-content .pro-details-group {
     margin: 35px 0 25px;
@@ -14182,6 +14187,7 @@ textarea:focus {
     display: inline-block;
     height: 40px;
     max-width: 44px;
+    border: 2px double;
 }
 .pro-details-color-content .btn-group label :last-child {
     margin-right: 0;
@@ -15660,6 +15666,9 @@ h3.cart-page-title {
 .cart-table-content table tbody > tr {
     border-bottom: 1px solid #ebebeb;
 }
+.cart-table-content table tbody > tr td {
+    border-left: 2px solid #ebebeb;
+}
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .cart-table-content table tbody > tr {
         width: 50%;
@@ -15667,7 +15676,17 @@ h3.cart-page-title {
     }
 }
 .cart-table-content table tbody > tr td.product-thumbnail {
-    width: 150px;
+    max-width: 350px;
+    width: 350px;
+    margin-left: 10px;
+}
+
+.cart-table-content table tbody > tr td.product-thumbnail a img{
+    max-width: 270px;
+    width: 270px;
+    max-height: 270px;
+    margin: 10px auto;
+    align-self: center;
 }
 @media only screen and (max-width: 767px) {
     .cart-table-content table tbody > tr td.product-thumbnail {
@@ -15679,7 +15698,7 @@ h3.cart-page-title {
     }
 }
 .cart-table-content table tbody > tr td.product-name {
-    width: 435px;
+    max-width: 250px;
 }
 @media only screen and (max-width: 767px) {
     .cart-table-content table tbody > tr td.product-name {
@@ -15695,7 +15714,7 @@ h3.cart-page-title {
     color: #ff2f2f;
 }
 .cart-table-content table tbody > tr td.product-price-cart {
-    width: 435px;
+    max-width: 200px;
 }
 @media only screen and (max-width: 767px) {
     .cart-table-content table tbody > tr td.product-price-cart {
@@ -15708,7 +15727,7 @@ h3.cart-page-title {
     font-weight: 500;
 }
 .cart-table-content table tbody > tr td.product-quantity {
-    width: 435px;
+    max-width: 200px;
 }
 @media only screen and (max-width: 767px) {
     .cart-table-content table tbody > tr td.product-quantity {

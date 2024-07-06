@@ -4,6 +4,7 @@
     Author     : HP
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <header class="header-area">
     <div class="container">
@@ -73,6 +74,9 @@
                                     <li><a href="${pageContext.request.contextPath}/Cart">MY CART</a>
                                     </li>
                                     <li><a href="contact.html">CONTACT </a></li>
+                                    <c:if test="${sessionScope.user.isAdmin}">
+                                        <li><a href="${pageContext.request.contextPath}/dashboard">SHOP MANAGEMENT </a></li>
+                                    </c:if>
                                 </ul>
                             </nav>
                         </div>
@@ -92,10 +96,7 @@
                                 </div>
                             </div>
                             <div class="same-style-2">
-                                <a class="active" href="/Abibas/View/User/myAccount.jsp" style="text-align: center;"><i class="icon-user"></i><p>${sessionScope.user.user_name}</p></a>
-                            </div>
-                            <div class="same-style-2">
-                                <a href="login-register.html"><i class="icon-heart"></i><span class="pro-count red">03</span></a>
+                                <a class="active" href="${pageContext.request.contextPath}/user?action=accountDetail&id=${user.user_id}" style="text-align: center;"><i class="icon-user"></i><p>${sessionScope.user.user_name}</p></a>
                             </div>
                             <div class="same-style-2 header-cart">
                                 <a class="cart-active" href="#" id="header_cart">

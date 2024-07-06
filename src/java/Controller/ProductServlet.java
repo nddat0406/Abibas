@@ -38,7 +38,9 @@ public class ProductServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html; charset=UTF-8");
         String action = request.getParameter("action");
 
         if (action == null) {
@@ -52,6 +54,7 @@ public class ProductServlet extends HttpServlet {
             request.getSession().setAttribute("CategoryData", category);
             pagination(request, response);
         } else {
+            
             if (action.equals("listByCategory")) {
                 String category_id = request.getParameter("category_id");
                 int category_id1 = Integer.parseInt(category_id);
@@ -62,6 +65,7 @@ public class ProductServlet extends HttpServlet {
                 pagination(request, response);
 //                request.setAttribute("listByCateID", category_id1);
             }
+            
             if (action.equals("productdetail")) {
                 String product_idRaw = request.getParameter("productId");
                 try {
@@ -81,6 +85,7 @@ public class ProductServlet extends HttpServlet {
                 } catch (NumberFormatException e) {
                 }
             }
+            
             if (action.equals("searchFilter")) {
                 ProductDAO dao = new ProductDAO();
                 HttpSession session = request.getSession();
@@ -117,9 +122,11 @@ public class ProductServlet extends HttpServlet {
                 }
 
             }
+            
             if (action.equals("pagination")) {
                 pagination(request, response);
             }
+            
             if (action.equals("sortProduct")) {
                 ProductDAO dao = new ProductDAO();
                 String sortBy = request.getParameter("sortBy");
@@ -129,6 +136,7 @@ public class ProductServlet extends HttpServlet {
                 request.getSession().setAttribute("sortBy", sortBy);
                 pagination(request, response);
             }
+            
             if (action.equals("getModalInfo")) {
                 String productIDRaw = request.getParameter("productID");
                 try {

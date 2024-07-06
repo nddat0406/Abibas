@@ -79,11 +79,11 @@
                                 <div class="product-details-tab">
                                     <div class="easyzoom-style easyzoom--overlay">
                                         <div class="easyzoom easyzoom--overlay">
-                                            <a href="${pageContext.request.contextPath}/assets/images/product-details/b-large-1.jpg">
-                                            <img src="${pageContext.request.contextPath}/assets/images/product-details/large-1.jpg" alt="" >
+                                            <a href="${requestScope.ProductData.productImg}">
+                                            <img src="${requestScope.ProductData.productImg}" alt="" >
                                         </a>
                                     </div>
-                                    <a class="easyzoom-pop-up img-popup" href="${pageContext.request.contextPath}/assets/images/product-details/b-large-1.jpg"><i class="icon-size-fullscreen"></i></a>
+                                    <a class="easyzoom-pop-up img-popup" href="${requestScope.ProductData.productImg}"><i class="icon-size-fullscreen"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -121,7 +121,7 @@
                                             <c:forEach items="${ColorData}" var="c">
                                                 <label class="btn" style="background-color: ${c.color}" id="ProdDetailColor">
                                                     <input type="radio" name="colorOption" value="${c.color.trim()}" autocomplete="off" >
-                                                    <span style="color:  ${c.color.trim().equals("#ffffff")?'black':'white'}">Z</span>
+                                                    <span style="color:  ${c.color.trim().equals("white")?'black':'white'}">Z</span>
                                                 </label>
                                             </c:forEach>
                                             <div id="colorvalidate" class="text-danger"></div>

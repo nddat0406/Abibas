@@ -59,13 +59,19 @@ public class Item {
     public void setColor(String color) {
         this.color = color;
     }
-        public List<Size> getAllSize(){
+    
+    public List<Size> getAllSize(){
         ProductDAO dao = new ProductDAO();
         return dao.getSizeByID(product.getProductID());
     }
-        public List<Color> getAllColor(){
+    public List<Color> getAllColor(){
         ProductDAO dao = new ProductDAO();
         return dao.getColorByID(product.getProductID());
+    }
+
+    @Override
+    public String toString() {
+        return "Item{" + "product=" + product + ", quantity=" + quantity + ", size=" + size + ", color=" + color + '}';
     }
     
 }

@@ -35,6 +35,11 @@ public class Size {
     public void setSize(String size) {
         this.size = size;
     }
+
+    @Override
+    public String toString() {
+        return "Size{" + "productID=" + productID + ", size=" + size + '}';
+    }
     
     
 }

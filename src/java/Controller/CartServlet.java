@@ -36,6 +36,9 @@ public class CartServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession(true);
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html; charset=UTF-8");
         String action = request.getParameter("action");
         ProductDAO dao = new ProductDAO();
         if (action == null) {
@@ -56,6 +59,11 @@ public class CartServlet extends HttpServlet {
             int cartSize = 0;
             if (listItem != null) {
                 cartSize = cart.getItems().size();
+            }
+            String modalMess = request.getParameter("modalMess");
+            if (modalMess != null) {
+                request.setAttribute("modalMess", "Đặt hàng không thành công! Vui lòng thêm sản phẩm vào giỏ hàng để tiếp tục.");
+                request.setAttribute("modalTitle", "Giỏ hàng trống!");
             }
             session.setAttribute("cart", cart);
             session.setAttribute("cartSize", cartSize);

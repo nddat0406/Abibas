@@ -52,34 +52,33 @@
                             <ul>
                                 <li>
                                     <a href="${pageContext.request.contextPath}/Home">Home</a>
-                                </li>
-                                <li class="active"> Cart Page </li>
-                            </ul>
-                        </div>
+                            </li>
+                            <li class="active"> Cart Page </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="cart-main-area pt-115 pb-120">
-                    <div class="container" style="margin-left:  100px; margin-right: 100px; max-width: 90%">
-                        <h3 class="cart-page-title">Your cart items</h3>
-                        <div class="row">
-                            <div class=" col-9">
-                                <form action="#">
-                                    <div class="table-content table-responsive cart-table-content" >
-
-                                        <table id="tableCont">
-                                            <thead>
-                                                <tr>
-                                                    <th>Image</th>
-                                                    <th>Product Name</th>
-                                                    <th>Until Price</th>
-                                                    <th>Size</th>
-                                                    <th>Color</th>
-                                                    <th>Qty</th>
-                                                    <th>Subtotal</th>
-                                                    <th>action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody id="tableBody">
+            </div>
+            <div class="cart-main-area pt-115 pb-120">
+                <div class="container" style="margin-left:  100px; margin-right: 100px; max-width: 90%">
+                    <h3 class="cart-page-title">Your cart items</h3>
+                    <div class="row">
+                        <div class=" col-9">
+                            <form action="#">
+                                <div class="table-content table-responsive cart-table-content" >
+                                    <table id="tableCont">
+                                        <thead>
+                                            <tr>
+                                                <th>Image</th>
+                                                <th>Product Name</th>
+                                                <th>Until Price</th>
+                                                <th>Size</th>
+                                                <th>Color</th>
+                                                <th>Qty</th>
+                                                <th>Subtotal</th>
+                                                <th>action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tableBody">
                                             <c:forEach items="${sessionScope.cart.items}" var="i">
                                                 <tr>
                                                     <td class="product-thumbnail">
@@ -147,52 +146,29 @@
                         </div>
                         <div class="col-3">
                             <div class="grand-totall" id="cartGrandTotal">
-                                <div class="title-wrap">
-                                    <h4 class="cart-bottom-title section-bg-gary-cart">Cart Total</h4>
-                                </div>
-                                <h5>Total products <span id="beforeCheckOutPricetext">
-                                        <input type="hidden"  id="beforeCheckOut" value="${sessionScope.cart.getTotalMoney()}">
-                                        <fmt:setLocale value = "en_US"/>
-                                        <fmt:formatNumber  value="${sessionScope.cart.getTotalMoney()}" type="currency"></fmt:formatNumber>
-                                        </span></h5>
-                                    <div class="total-shipping">
-                                        <h5>Total shipping</h5>
-                                        <ul id="shipFee">
-                                            <li><input type="radio" name="shipFee"  value="20"> Standard <span>$20.00</span></li>
-                                            <li><input type="radio" name="shipFee" value="30"> Express <span>$30.00</span></li>
-                                        </ul>
+                                <form id="shipFeeForm" action="Order" method="post">
+                                    <div class="title-wrap">
+                                        <h4 class="cart-bottom-title section-bg-gary-cart">Cart Total</h4>
                                     </div>
-                                    <h4 class="grand-totall-title">Grand Total <span id="checkOutPrice">
-                                            <input type="hidden" id="checkOutPriceInput" value="${sessionScope.cart.getTotalMoney()}">
-                                        <fmt:setLocale value = "en_US"/>
-                                        <fmt:formatNumber  value="${sessionScope.cart.getTotalMoney()}" type="currency"></fmt:formatNumber></span></h4>
-                                    <a href="#">Proceed to Checkout</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="subscribe-area bg-gray pt-115 pb-115">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-5 col-md-5">
-                                <div class="section-title">
-                                    <h2>keep connected</h2>
-                                    <p>Get updates by subscribe our weekly newsletter</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-7 col-md-7">
-                                <div id="mc_embed_signup" class="subscribe-form">
-                                    <form id="mc-embedded-subscribe-form" class="validate subscribe-form-style" novalidate="" target="_blank" name="mc-embedded-subscribe-form" method="post" action="https://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef">
-                                        <div id="mc_embed_signup_scroll" class="mc-form">
-                                            <input class="email" type="email" required="" placeholder="Enter your email address" name="EMAIL" value="">
-                                            <div class="mc-news" aria-hidden="true">
-                                                <input type="text" value="" tabindex="-1" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef">
-                                            </div>
-                                            <div class="clear">
-                                                <input id="mc-embedded-subscribe" class="button" type="submit" name="subscribe" value="Subscribe">
-                                            </div>
+                                    <h5>Total products <span id="beforeCheckOutPricetext">
+                                            <input type="hidden"  id="beforeCheckOut" value="${sessionScope.cart.getTotalMoney()}">
+                                            <fmt:setLocale value = "en_US"/>
+                                            <fmt:formatNumber  value="${sessionScope.cart.getTotalMoney()}" type="currency"></fmt:formatNumber>
+                                            </span></h5>
+                                        <div class="total-shipping">
+                                            <h5>Total shipping</h5>
+
+                                            <ul id="shipFee">
+                                                <li><input type="radio" name="shipFee"  value="20"> Standard <span>$20.00</span></li>
+                                                <li><input type="radio" name="shipFee" value="30"> Express <span>$30.00</span></li>
+                                            </ul>
+                                            <p id="shippingMess" hidden="true" class="alert-danger">Please choose one of the shipping methods!</p>
                                         </div>
+                                        <h4 class="grand-totall-title">Grand Total <span id="checkOutPrice">
+                                                <input type="hidden" id="checkOutPriceInput" value="${sessionScope.cart.getTotalMoney()}">
+                                            <fmt:setLocale value = "en_US"/>
+                                            <fmt:formatNumber  value="${sessionScope.cart.getTotalMoney()}" type="currency"></fmt:formatNumber></span></h4>
+                                        <a href="#" id="checkOutButton">Proceed to Checkout</a>
                                     </form>
                                 </div>
                             </div>
@@ -200,12 +176,24 @@
                     </div>
                 </div>
             <jsp:include page="../Common/footer.jsp"></jsp:include>
-            </div>
+            <c:if test="${modalMess!=null}">
+                <jsp:include page="../Common/modalMessage.jsp"></jsp:include>
+                    <script>
+                        window.onload = () => {
+                            $('#modalMessContent').attr("class", "alert alert-danger");
+                            $('#modalMessContent').text("${requestScope.modalMess}");
+                            $('#myModelTitle').text("${requestScope.modalTitle}");
+                            const myModal = new bootstrap.Modal('#myMessModal');
+                            myModal.show();
+                        };
+                </script>
+            </c:if>
+        </div>
 
-            <!-- All JS is here
-        ============================================ -->
+        <!-- All JS is here
+    ============================================ -->
 
-            <script src="${pageContext.request.contextPath}/assets/js/vendor/modernizr-3.11.7.min.js"></script>
+        <script src="${pageContext.request.contextPath}/assets/js/vendor/modernizr-3.11.7.min.js"></script>
         <script src="${pageContext.request.contextPath}/assets/js/vendor/jquery-v3.6.0.min.js"></script>
         <script src="${pageContext.request.contextPath}/assets/js/vendor/jquery-migrate-v3.3.2.min.js"></script>
         <script src="${pageContext.request.contextPath}/assets/js/vendor/popper.min.js"></script>

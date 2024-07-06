@@ -50,9 +50,9 @@
                                         <div class="main-menu main-menu-padding-2 main-menu-center main-menu-font-width-400 main-menu-lh-4 main-menu-hover-semibold ">
                                             <nav>
                                                 <ul>
-                                                    <li><a class="active" href="${pageContext.request.contextPath}/View/User/myAccount.jsp" ><i class="icon-user"></i> ${sessionScope.user.user_name} </a>
+                                                    <li><a class="active" href="${pageContext.request.contextPath}/user?action=accountDetail&id=${user.user_id}" ><i class="icon-user"></i> ${sessionScope.user.user_name} </a>
                                                         <ul class="sub-menu-style">
-                                                            <li><a href="${pageContext.request.contextPath}/View/User/myAccount.jsp"><i class="icon-folder-alt"></i> My Account </a></li>
+                                                            <li><a href="${pageContext.request.contextPath}/user?action=accountDetail&id=${user.user_id}"><i class="icon-folder-alt"></i> My Account </a></li>
                                                             <li><a href="${pageContext.request.contextPath}/user?action=logout"> <i class="icon-logout"></i>Logout</a></li>
                                                         </ul>
                                                     </li>
@@ -62,10 +62,10 @@
 
                                     </c:if>
                                 </div>
-                                <div class="header-cart-2" >
+                                <div class="header-cart-2" style="display: flex;align-items: center">
                                     <a class="cart-active" href="#"><i class="icon-basket-loaded"></i> <span class="black">${sessionScope.cartSize}</span>
                                         <fmt:setLocale value = "en_US"/>
-                                        <fmt:formatNumber  value="${sessionScope.cart.getTotalMoney()}" type="currency"></fmt:formatNumber> </a>
+                                        <fmt:formatNumber  value="${cart.getTotalMoney()}" type="currency"></fmt:formatNumber> </a>
                                 </div>
                             </div>
                         </div>
@@ -85,6 +85,9 @@
                                     <li><a href="${pageContext.request.contextPath}/Product">SHOP </a>
                                     <li><a href="${pageContext.request.contextPath}/Cart">MY CART </a></li>
                                     <li><a href="contact.html">CONTACT </a></li>
+                                    <c:if test="${sessionScope.user.isAdmin}">
+                                        <li><a href="${pageContext.request.contextPath}/dashboard">SHOP MANAGEMENT </a></li>
+                                    </c:if>
                                 </ul>
                             </nav>
                         </div>
@@ -106,12 +109,9 @@
                 <div class="col-7">
                     <div class="header-action header-action-flex">
                         <div class="same-style-2 same-style-2-font-inc">
-                            <a href="login-register.html"><i class="icon-user"></i></a>
+                            <a href="${pageContext.request.contextPath}/user?action=accountDetail?id=${user.user_id}"><i class="icon-user"></i></a>
                         </div>
-                        <div class="same-style-2 same-style-2-font-inc">
-                            <a href="wishlist.html"><i class="icon-heart"></i><span class="pro-count black">03</span></a>
-                        </div>
-                        <div class="same-style-2 same-style-2-font-inc header-cart" id=header_cart">
+                        <div class="same-style-2 same-style-2-font-inc header-cart" id=header_cart" style="align-items: center">
                             <a class="cart-active" href="#">
                                 <i class="icon-basket-loaded"></i><span class="pro-count black">${sessionScope.cartSize}</span>
                             </a>

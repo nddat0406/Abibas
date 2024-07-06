@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Model;
+
 import jakarta.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +17,7 @@ public class Cart {
     List<Item> items;
 
     public Cart() {
-        
+
     }
 
     public Cart(String txt, List<Product> list) {
@@ -31,7 +32,10 @@ public class Cart {
                     int quantity = Integer.parseInt(p[1]);
                     String size = p[2];
                     String color = p[3];
-                    items.add(new Item(getProductById(id, list), quantity, size, color));
+                    Product temp = getProductById(id, list);
+                    if (temp != null) {
+                        items.add(new Item(temp, quantity, size, color));
+                    }
                 }
             }
         } catch (NumberFormatException e) {
@@ -108,7 +112,7 @@ public class Cart {
         }
     }
 
-    public void UpdateItem(int id, int quantity, String Size, String color, String oldColor,String oldSize) {
+    public void UpdateItem(int id, int quantity, String Size, String color, String oldColor, String oldSize) {
         Item temp = getItemInCart(id, oldSize, oldColor);
         if (temp != null) {
             temp.setQuantity(quantity);
@@ -128,7 +132,7 @@ public class Cart {
 
     public String getCookieForm() {
         String txt = "";
-        if (items!=null && !items.isEmpty()) {
+        if (items != null && !items.isEmpty()) {
             Item fistItem = items.get(0);
             txt += fistItem.getProduct().getProductID() + ":" + fistItem.getQuantity() + ":" + fistItem.getSize() + ":" + fistItem.getColor();
             for (int i = 1; i < items.size(); i++) {

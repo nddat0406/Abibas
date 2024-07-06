@@ -12,9 +12,12 @@
                 <nav>
                     <ul>
                         <li><a class="active" href="${pageContext.request.contextPath}/Home">Home</a></li>
-                        <li><a href="shop.html">Shop</a></li>
-                        <li><a href="shop.html">Product </a></li>
+                        <li><a href="${pageContext.request.contextPath}/Product">Shop</a></li>
+                        <li><a href="${pageContext.request.contextPath}/Cart">Product </a></li>
                         <li><a href="contact.html">Contact</a></li>
+                        <c:if test="${sessionScope.user.isAdmin}">
+                            <li><a href="${pageContext.request.contextPath}/dashboard">SHOP MANAGEMENT </a></li>
+                        </c:if>
                     </ul>
                 </nav>
             </div>

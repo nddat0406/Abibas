@@ -1,3 +1,4 @@
+  
 (function ($) {
     "use strict";
 
@@ -1188,6 +1189,10 @@
             success: function () {
                 //refresh the mini cart and cart icon
                 $('#header_cart').load(window.location.href + " #header_cart");
+                $('#miniCartContent').load(window.location.href + " #miniCartContent");
+                swal({
+                    text:"true"
+                });
             }
         });
     }
@@ -1250,7 +1255,6 @@
         var id = $tableRow.find('#productIDInput').val();
         var quantity = $tableRow.find('.cart-plus-minus-box').val();
         var size = $tableRow.find('.product-size > select').val();
-
         updateCart(id, quantity, size, color, oldSize, oldColor);
     });
 
@@ -1269,5 +1273,19 @@
             }
         });
     }
+    
+    $('#checkOutButton').on('click',function (){
+        var form = $(this).closest('form');
+        form.find("#shippingMess").attr("hidden",true);
+        var checked = form.find("input[type='radio'][name='shipFee']:checked");
+        
+        if(typeof checked.val() !== "undefined"){
+            
+            form.submit();
+        }else{
+
+            form.find("#shippingMess").attr("hidden",false);
+        };
+    });
 })(jQuery);
 

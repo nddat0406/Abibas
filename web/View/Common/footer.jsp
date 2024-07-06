@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<footer class="footer-area bg-gray pb-30">
+<footer class="footer-area bg-gray pb-30" style="padding-top: 60px ;padding-bottom: 0px">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6">
@@ -43,9 +43,7 @@
                         <a href="#"><i class="social_instagram"></i></a>
                         <a href="#"><i class="social_youtube"></i></a>
                     </div>
-                    <div class="copyright">
-                        <p>Copyright © 2022 HasThemes | <a href="https://hasthemes.com/">Built with <span>Norda</span> by HasThemes</a>.</p>
-                    </div>
+                    
                 </div>
             </div>
         </div>

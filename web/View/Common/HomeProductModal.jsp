@@ -58,7 +58,7 @@
                                         <c:forEach items="${ColorData}" var="c">
                                             <label class="btn" style="background-color: ${c.color}" id="ProdDetailColor">
                                                 <input type="radio" name="colorOption" value="${c.color.trim()}" autocomplete="off" >
-                                                <span style="color:  ${c.color.trim().equals("#ffffff")?'black':'white'}">Z</span>
+                                                <span style="color:  ${c.color.trim().equals("#white")?'black':'white'}">Z</span>
                                             </label>
                                         </c:forEach>
                                         <div class="text-danger" id="colorvalidate"></div>
