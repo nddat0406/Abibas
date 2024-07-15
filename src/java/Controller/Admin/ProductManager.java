@@ -77,7 +77,7 @@ public class ProductManager extends HttpServlet {
                         request.getRequestDispatcher("View/Admin/productInsert.jsp").forward(request, response);
                     } else {
                         pdao.insertCategory(name);
-                        request.getRequestDispatcher(request.getContextPath()+"/productmanager?action=insert").forward(request, response);
+                        request.getRequestDispatcher(request.getContextPath() + "/productmanager?action=insert").forward(request, response);
                     }
                 }
 
@@ -112,8 +112,8 @@ public class ProductManager extends HttpServlet {
                     float price = Float.parseFloat(product_price);
                     int cid = Integer.parseInt(category_id);
                     ProductDAO dao = new ProductDAO();
-                    Category cate = new Category(cid); 
-                    int id = dao.getCurentID()+1;
+                    Category cate = new Category(cid);
+                    int id = dao.getCurentID() + 1;
                     String[] size_rw = product_size.split("\\s*,\\s*");
                     String[] color_rw = product_color.split("\\s*,\\s*");
                     int[] size = new int[size_rw.length];
@@ -169,15 +169,19 @@ public class ProductManager extends HttpServlet {
                     String product_price = request.getParameter("product_price");
                     String product_size = request.getParameter("product_size");
                     String product_color = request.getParameter("product_color");
+                    String product_imgRaw = request.getParameter("product_img");
                     String product_quantity = request.getParameter("product_quantity");
-                    String product_img = request.getContextPath() + "/assets/images/ProductImg/" + request.getParameter("product_img");
                     String product_describe = request.getParameter("product_describe");
                     int id = Integer.parseInt(product_id);
                     int quantity = Integer.parseInt(product_quantity);
                     float price = Float.parseFloat(product_price);
                     int cid = Integer.parseInt(category_id);
                     ProductDAO dao = new ProductDAO();
+                    String product_img = request.getContextPath() + "/assets/images/ProductImg/" + request.getParameter("product_img");
                     Category cate = new Category(cid);
+                    if (product_imgRaw == null ||  product_imgRaw.isBlank()) {
+                        product_img = dao.getProductByID(id).getProductImg();
+                    } 
                     String[] size_rw = product_size.split("\\s*,\\s*");
                     String[] color_rw = product_color.split("\\s*,\\s*");
                     int[] size = new int[size_rw.length];

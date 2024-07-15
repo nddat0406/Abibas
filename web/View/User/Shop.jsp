@@ -188,7 +188,7 @@
                                                     <div class="single-product-wrap mb-35">
                                                         <div class="product-img product-img-zoom mb-15">
                                                             <a href="${pageContext.request.contextPath}/Product?productId=${p.productID}&action=productdetail">
-                                                                <img src="${p.productImg}" alt="">
+                                                                <img src="${p.productImg}" alt="" style="height: 336px;">
                                                             </a>
                                                             <div class="product-action-2 tooltip-style-2">
                                                                 <button title="Wishlist"><i class="icon-heart"></i></button>
@@ -223,7 +223,7 @@
                                                     <div class="col-xl-4 col-lg-5 col-md-6 col-sm-6">
                                                         <div class="product-list-img">
                                                             <a href="${pageContext.request.contextPath}/Product?productId=${p.productID}&action=productdetail">
-                                                                <img src="${p.productImg}" alt="Product Style">
+                                                                <img src="${p.productImg}" alt="Product Style" style="height: 280px;">
                                                             </a>
                                                             <div class="product-list-quickview">
                                                                 <button title="Quick View" data-bs-toggle="modal" data-bs-target="#myModal"><i class="icon-size-fullscreen icons"></i></button>
@@ -378,7 +378,7 @@
             <!-- All JS is here
         ============================================ -->
 
-            <script src="${pageContext.request.contextPath}/assets/js/vendor/modernizr-3.11.7.min.js"></script>
+        <script src="${pageContext.request.contextPath}/assets/js/vendor/modernizr-3.11.7.min.js"></script>
         <script src="${pageContext.request.contextPath}/assets/js/vendor/jquery-v3.6.0.min.js"></script>
         <script src="${pageContext.request.contextPath}/assets/js/vendor/jquery-migrate-v3.3.2.min.js"></script>
         <script src="${pageContext.request.contextPath}/assets/js/vendor/popper.min.js"></script>

@@ -166,7 +166,7 @@
                                                 <div class="col-lg-12 col-md-12">
                                                     <div class="billing-info mb-20">
                                                         <label>Phone <abbr class="required" title="required">*</abbr></label>
-                                                        <input type="text" name="phone" placeholder="Your Phone Number" value="${sessionScope.user.phone}" required="true" pattern="pattern="[0]{1}[0-9]{9}"">
+                                                        <input type="text" name="phone" placeholder="Your Phone Number" value="${sessionScope.user.phone}" required="true" pattern="[0]{1}[0-9]{9}">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12 col-md-12">

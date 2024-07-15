@@ -74,9 +74,9 @@
                                     <li><a href="${pageContext.request.contextPath}/Cart">MY CART</a>
                                     </li>
                                     <li><a href="contact.html">CONTACT </a></li>
-                                    <c:if test="${sessionScope.user.isAdmin}">
+                                        <c:if test="${sessionScope.user.isAdmin}">
                                         <li><a href="${pageContext.request.contextPath}/dashboard">SHOP MANAGEMENT </a></li>
-                                    </c:if>
+                                        </c:if>
                                 </ul>
                             </nav>
                         </div>
@@ -89,8 +89,9 @@
                                     <i class="icon_close s-close"></i>
                                 </a>
                                 <div class="search-wrap-1">
-                                    <form action="#">
-                                        <input placeholder="Search products…" type="text">
+                                    <form action="${pageContext.request.contextPath}/Product">
+                                        <input type="text" hidden name="action" value="searchFilter">
+                                        <input placeholder="Type anything & Hit enter" name="searchKey" type="text">
                                         <button class="button-search"><i class="icon-magnifier"></i></button>
                                     </form>
                                 </div>

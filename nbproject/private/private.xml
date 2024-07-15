@@ -3,15 +3,24 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/dal/OrderDAO.java</file>
             <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/dal/ProductDAO.java</file>
-            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/Common/AdminCommon/headerAdmin.jsp</file>
-            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/Admin/productInsert.jsp</file>
-            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/Common/productModalAdmin.jsp</file>
-            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Controller/Admin/ProductManager.java</file>
-            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/assets/css/mainAdmin.css</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Controller/OrderServlet.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/Common/HomePageCommon/homeHeader.jsp</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Controller/ProductServlet.java</file>
             <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/assets/js/mainAdmin.js</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/Common/HomeProductModal.jsp</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/User/Shop.jsp</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/User/Home.jsp</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/assets/js/main.js</file>
+        </group>
+        <group name="Prj301-class">
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Filter/ExtendFilter.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/Admin/productInsert.jsp</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Filter/MyAccountFilter.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/index.jsp</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/Admin/orderDetail.jsp</file>
             <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/Admin/product.jsp</file>
-            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/Admin/indexAdmin.jsp</file>
         </group>
     </open-files>
 </project-private>

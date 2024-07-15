@@ -65,7 +65,7 @@
                                         <h1 class="animated"><span>Realtree</span> <br>Print Belt Bagn</h1>
                                         <p class="animated">Lorem ipsum dolor sit amet, consectetur adipis elit. Nunc imperdiet, nulla.</p>
                                         <div class="btn-style-2">
-                                            <a class="animated" href="ProductDetail.jsp">explore now <i class="icon-arrow-right"></i></a>
+                                            <a class="animated" href="${pageContext.request.contextPath}/Product">explore now <i class="icon-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -80,7 +80,7 @@
                                         <h1 class="animated"><span>Realtree</span> <br>Print Belt Bagn</h1>
                                         <p class="animated">Lorem ipsum dolor sit amet, consectetur adipis elit. Nunc imperdiet, nulla.</p>
                                         <div class="btn-style-2">
-                                            <a class="animated" href="ProductDetail.jsp">explore now <i class="icon-arrow-right"></i></a>
+                                            <a class="animated" href="${pageContext.request.contextPath}/Product">explore now <i class="icon-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -95,13 +95,13 @@
                         <div class="col-lg-6 col-md-6">
                             <div class="banner-wrap mb-30">
                                 <div class="banner-img banner-img-zoom">
-                                    <a href="ProductDetail.jsp"><img src="${pageContext.request.contextPath}/assets/images/banner/banner-10.jpg" alt=""></a>
+                                    <a href="${pageContext.request.contextPath}/Product"><img src="${pageContext.request.contextPath}/assets/images/banner/banner-10.jpg" alt=""></a>
                                 </div>
                                 <div class="banner-content-11">
                                     <h2><span>Zara</span> Pattern Boxed <br>Underwear</h2>
                                     <p>Stretch, & Fress cool</p>
                                     <div class="btn-style-4">
-                                        <a class="hover-red" href="ProductDetail.jsp">Shop now <i class="icon-arrow-right"></i></a>
+                                        <a class="hover-red" href="${pageContext.request.contextPath}/Product">Shop now <i class="icon-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -109,13 +109,13 @@
                         <div class="col-lg-6 col-md-6">
                             <div class="banner-wrap mb-30">
                                 <div class="banner-img banner-img-zoom">
-                                    <a href="ProductDetail.jsp"><img src="${pageContext.request.contextPath}/assets/images/banner/banner-11.jpg" alt=""></a>
+                                    <a href="${pageContext.request.contextPath}/Product"><img src="${pageContext.request.contextPath}/assets/images/banner/banner-11.jpg" alt=""></a>
                                 </div>
                                 <div class="banner-content-11">
                                     <h2><span>Basic</span> Color<br>Caps</h2>
                                     <p>Less is more!</p>
                                     <div class="btn-style-4">
-                                        <a class="hover-red" href="ProductDetail.jsp">Shop now <i class="icon-arrow-right"></i></a>
+                                        <a class="hover-red" href="${pageContext.request.contextPath}/Product">Shop now <i class="icon-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -216,7 +216,7 @@
                                                         <span>${top.productPrice}</span>
                                                     </div>
                                                     <div class="pro-add-to-cart">
-                                                        <button title="Add to Cart">Add To Cart</button>
+                                                        <button title="Add to Cart" onclick="getModalInfor(${top.productID})">Add To Cart</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -261,7 +261,7 @@
                                             <span>${newP.productPrice}</span>
                                         </div>
                                         <div class="pro-add-to-cart">
-                                            <button title="Add to Cart">Add To Cart</button>
+                                            <button title="Add to Cart" onclick="getModalInfor(${newP.productID})">Add To Cart</button>
                                         </div>
                                     </div>
                                 </div>
@@ -276,7 +276,7 @@
                         <div class="col-lg-8 col-md-8">
                             <div class="banner-wrap banner-wrap-mrg-1 mb-30">
                                 <div class="banner-img banner-img-zoom">
-                                    <a href="ProductDetail.jsp"><img src="${pageContext.request.contextPath}/assets/images/banner/banner-12.jpg" alt=""></a>
+                                    <a href="${pageContext.request.contextPath}/Product"><img src="${pageContext.request.contextPath}/assets/images/banner/banner-12.jpg" alt=""></a>
                                 </div>
                                 <div class="banner-content-12">
                                     <h2>Theloke Charm <br>Perfume</h2>
@@ -284,7 +284,7 @@
                                     <span>Start from</span>
                                     <h3>$59.25</h3>
                                     <div class="btn-style-1">
-                                        <a class="animated btn-1-padding-4" href="ProductDetail.jsp">Shop Now</a>
+                                        <a class="animated btn-1-padding-4" href="${pageContext.request.contextPath}/Product">Shop Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -292,7 +292,7 @@
                         <div class="col-lg-4 col-md-4">
                             <div class="banner-wrap banner-wrap-mrg-2 mb-30">
                                 <div class="banner-img banner-img-zoom">
-                                    <a href="ProductDetail.jsp"><img src="${pageContext.request.contextPath}/assets/images/banner/banner-13.jpg" alt=""></a>
+                                    <a href="${pageContext.request.contextPath}/Product"><img src="${pageContext.request.contextPath}/assets/images/banner/banner-13.jpg" alt=""></a>
                                 </div>
                                 <div class="banner-content-12">
                                     <h2>Double Frame <br>Sunglasses</h2>

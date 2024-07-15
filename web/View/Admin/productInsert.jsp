@@ -193,7 +193,7 @@
                                 </div>
                                 <div class="form-group  col-md-3">
                                     <label class="control-label">Số lượng</label>
-                                    <input class="form-control" name="product_quantity" type="number" min="0" required>
+                                    <input class="form-control" name="product_quantity" type="number" min="1" required>
                                 </div>
                                 <div class="form-group col-md-12">
                                     <label class="control-label">Ảnh sản phẩm</label>

@@ -101,13 +101,12 @@
                                                     <input type="text" name="email" placeholder="Email" value="${cookie.email.value}">
                                                     <input type="password" name="password" placeholder="Password" value="${cookie.pass.value}">
                                                     <c:if test="${errorMessage!=null}">
-                                                        <c:out value="${errorMessage}"></c:out>
+                                                        <p class="alert alert-warning alert-warning" style="margin-top: 10px ;font: icon;">${errorMessage}</p>
                                                     </c:if>
                                                     <div class="button-box">
                                                         <div class="login-toggle-btn">
                                                             <input type="checkbox" name="rem" value="true" ${cookie.rem.value!=null?'checked':''}>
                                                             <label>Remember me</label>
-                                                            <a href="#">Forgot Password?</a>
                                                         </div>
                                                         <button type="submit">Login</button>
                                                     </div>

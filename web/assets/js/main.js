@@ -1190,9 +1190,6 @@
                 //refresh the mini cart and cart icon
                 $('#header_cart').load(window.location.href + " #header_cart");
                 $('#miniCartContent').load(window.location.href + " #miniCartContent");
-                swal({
-                    text:"true"
-                });
             }
         });
     }

@@ -6,6 +6,7 @@ package dal;
 
 import Model.Order;
 import Model.OrderDetail;
+import Model.Product;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -53,7 +54,9 @@ public class OrderDAO extends DBContext {
                                       ,IDENT_CURRENT('Order')
                                       ,?
                                       ,?)""";
+
         try {
+            ProductDAO pdao = new ProductDAO();
             PreparedStatement pre1 = connection.prepareStatement(sqlOrder);
             pre1.setFloat(1, (float) order.getAmount());
             if (order.getUser() == null) {
@@ -68,6 +71,14 @@ public class OrderDAO extends DBContext {
             pre1.setString(7, order.getName());
             pre1.executeUpdate();
             for (OrderDetail i : order.getListOrderDetail()) {
+                Product p = pdao.getProductByID(i.getProduct().getProductID());
+                if(p.getProductQuantity()-i.getQuantity()<=0){
+                pdao.updateProduct(new Product(p.getProductID(), p.getProductName(), p.getProductImg(), 0,
+                        p.getProductPriceFloat(), p.getProductDescription(), p.getCate()));
+                }else{
+                    pdao.updateProduct(new Product(p.getProductID(), p.getProductName(), p.getProductImg(), p.getProductQuantity()-i.getQuantity(),
+                        p.getProductPriceFloat(), p.getProductDescription(), p.getCate()));
+                }
                 PreparedStatement pre2 = connection.prepareStatement(sqlDetail);
                 pre2.setInt(1, i.getQuantity());
                 pre2.setInt(2, i.getProduct().getProductID());
@@ -78,7 +89,6 @@ public class OrderDAO extends DBContext {
         } catch (SQLException e) {
             System.out.println(e);
         }
-
     }
 
     public List<Order> getBillByDay() {
@@ -195,19 +205,18 @@ public class OrderDAO extends DBContext {
             PreparedStatement pre = connection.prepareStatement(sql);
             pre.setInt(1, id);
             ResultSet rs = pre.executeQuery();
-            while(rs.next()){
+            while (rs.next()) {
                 list.add(new Order(rs.getInt(1), (double) rs.getFloat(2), dao.getUserByID(rs.getInt(3)), rs.getString(5), rs.getString(4),
-                            rs.getString(9), rs.getString(6), rs.getString(7), rs.getString(8)));
+                        rs.getString(9), rs.getString(6), rs.getString(7), rs.getString(8)));
             }
         } catch (SQLException e) {
             System.out.println(e);
         }
         return list;
     }
+
     public static void main(String[] args) {
         System.out.println(new OrderDAO().getOrderByUserID(1));
     }
-
-    
 
 }

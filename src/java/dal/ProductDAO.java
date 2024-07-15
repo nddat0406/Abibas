@@ -63,7 +63,7 @@ public class ProductDAO extends DBContext {
     public List<Product> getTrendProduct() {
         List<Product> list = new ArrayList<>();
         String sql = """
-                     select p.* from Product p 
+                     select top 12 p.* from Product p 
                                           left outer join 
                                           (SELECT [productId], sum(quantity) as 'count'
                                             FROM [Abibas_DB].[dbo].[OrderDetail]

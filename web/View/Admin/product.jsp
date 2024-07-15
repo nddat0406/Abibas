@@ -27,6 +27,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
         <script type="text/javascript">
             //Thời Gian
             function time() {
@@ -68,44 +69,6 @@
                     return i;
                 }
             }
-
-            $('.trash').on("click", function () {
-                Swal.fire({
-                    title: "Bạn có chắc muốn xóa sản phẩm này?",
-                    text: "Bạn sẽ không thể quay lại!",
-                    icon: "warning",
-                    showCancelButton: true,
-                    confirmButtonText: "Xóa!",
-                    cancelButtonText: "Hủy!",
-                    reverseButtons: true
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        Swal.fire({
-                            title: "Đã Xóa!",
-                            text: "Sản phẩm đã bị xóa.",
-                            icon: "success"
-                        });
-                        deleteProduct($(this).closest('button').val());
-                        deleteRow(this);
-                    }
-                });
-            });
-            function deleteRow(r) {
-                var i = r.parentNode.parentNode.rowIndex;
-                document.getElementById("sampleTable").deleteRow(i);
-            }
-
-            function deleteProduct(ID) {
-                $.ajax({
-                    url: "productmanager",
-                    type: 'post',
-                    data: {
-                        id: ID,
-                        action: "deleteProduct"
-                    }
-                });
-            }
-
             function getModalProduct(ID) {
                 $('#modalProductContent').load("${pageContext.request.contextPath}/productmanager?action=getModalProduct&id=" + ID + " #modalProductContent");
                 $('#myModalProduct').modal('show');
@@ -172,6 +135,8 @@
                 }
             });
         </script>
+        
+        
     </head>
 
     <body onload="time()" class="app sidebar-mini rtl">
@@ -292,7 +257,7 @@
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label class="control-label">Giá</label>
-                                        <input class="form-control" type="number" name="product_price" required value="${pModal.getProductPriceFloat()}">
+                                        <input class="form-control" type="number" name="product_price" required value="${pModal.getProductPriceFloat()}" step="0.01" min="0">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label class="control-label">Màu</label>
@@ -311,7 +276,7 @@
 
                                     <div class="form-group col-md-6">
                                         <label class="control-label">Số lượng</label>
-                                        <input class="form-control" type="text" name="product_quantity" value="${pModal.productQuantity}">
+                                        <input class="form-control" type="text" name="product_quantity" value="${pModal.productQuantity}" min="1">
                                     </div>
                                     <!--anh san pham-->
                                     <div class="form-group col-md-12">
@@ -364,6 +329,45 @@
         <!-- Data table plugin-->
         <script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/plugins/jquery.dataTables.min.js"></script>
         <script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/plugins/dataTables.bootstrap.min.js"></script>
+
+        <script>
+                                                $('.trash').on("click", function () {
+                                                    Swal.fire({
+                                                        title: "Bạn có chắc muốn xóa sản phẩm này?",
+                                                        text: "Bạn sẽ không thể quay lại!",
+                                                        icon: "warning",
+                                                        showCancelButton: true,
+                                                        confirmButtonText: "Xóa!",
+                                                        cancelButtonText: "Hủy!",
+                                                        reverseButtons: true
+                                                    }).then((result) => {
+                                                        if (result.isConfirmed) {
+                                                            Swal.fire({
+                                                                title: "Đã Xóa!",
+                                                                text: "Sản phẩm đã bị xóa.",
+                                                                icon: "success"
+                                                            });
+                                                            deleteProduct($(this).closest('button').val());
+                                                            deleteRow(this);
+                                                        }
+                                                    });
+                                                });
+                                                function deleteRow(r) {
+                                                    var i = r.parentNode.parentNode.rowIndex;
+                                                    document.getElementById("sampleTable").deleteRow(i);
+                                                }
+
+                                                function deleteProduct(ID) {
+                                                    $.ajax({
+                                                        url: "productmanager",
+                                                        type: 'post',
+                                                        data: {
+                                                            id: ID,
+                                                            action: "deleteProduct"
+                                                        }
+                                                    });
+                                                }
+        </script>
         <script type="text/javascript">$('#sampleTable').DataTable({"aaSorting": [[0, 'asc']]});</script>
     </body>
 

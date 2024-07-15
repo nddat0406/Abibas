@@ -52,7 +52,7 @@
                                                 class="fas fa-print"></i> In dữ liệu</a>
                                     </div>
                                 </div>
-                                <table class="table table-hover table-bordered" id="sampleTable">
+                                <table class="table table-hover table-bordered" id="sampleTable"  >
                                     <thead>
                                         <tr>
                                             <th>Ảnh</th>

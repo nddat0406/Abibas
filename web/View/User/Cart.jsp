@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="cart-main-area pt-115 pb-120">
-                <div class="container" style="margin-left:  100px; margin-right: 100px; max-width: 90%">
+                <div class="container" style="max-width: 95%">
                     <h3 class="cart-page-title">Your cart items</h3>
                     <div class="row">
                         <div class=" col-9">

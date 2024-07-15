@@ -15,11 +15,12 @@
                     </div>
                     <div class="single-contact-info">
                         <span>Our Location</span>
-                        <p>869 General Village Apt. 645, Moorebury, USA</p>
+                        <p>Hoa Lac Hi-tech Park, km 29, Đại lộ, Thăng Long, Hà Nội</p>
+                        <p>datndhe187230@fpt.edu.vn</p>
                     </div>
                     <div class="single-contact-info">
                         <span>24/7 hotline:</span>
-                        <p>(+99) 052 128 2399</p>
+                        <p>(+84)123456789</p>
                     </div>
                 </div>
             </div>
@@ -28,11 +29,13 @@
                     <div class="footer-menu">
                         <nav>
                             <ul>
-                                <li><a href="index.html">home</a></li>
-                                <li><a href="shop.html">Shop</a></li>
-                                <li><a href="shop.html">Product </a></li>
+                                <li><a class="active" href="${pageContext.request.contextPath}/Home">Home</a></li>
+                                <li><a href="${pageContext.request.contextPath}/Product">Shop</a></li>
+                                <li><a href="${pageContext.request.contextPath}/Cart">Product </a></li>
                                 <li><a href="contact.html">Contact</a></li>
-                                <li><a href="blog.html">Blog.</a></li>
+                                <c:if test="${sessionScope.user.isAdmin}">
+                                    <li><a href="${pageContext.request.contextPath}/dashboard">SHOP MANAGEMENT </a></li>
+                                </c:if>
                             </ul>
                         </nav>
                     </div>
@@ -43,7 +46,7 @@
                         <a href="#"><i class="social_instagram"></i></a>
                         <a href="#"><i class="social_youtube"></i></a>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
