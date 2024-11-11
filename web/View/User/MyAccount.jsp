@@ -11,9 +11,6 @@
 
 <!doctype html>
 <html class="no-js" lang="en">
-
-
-    <!-- Mirrored from htmldemo.net/norda/norda/my-account.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Jun 2024 13:45:17 GMT -->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -38,8 +35,6 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/plugins/magnific-popup.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/plugins/jquery-ui.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
-
-
     </head>
 
     <body>
@@ -73,10 +68,10 @@
                                 <div class="row">
                                     <div class="col-lg-3 col-md-4">
                                         <div class="myaccount-tab-menu nav" role="tablist">
-                                            <a href="#dashboad" ${accChangeMess!=null||passWrong!=null?'':'class="active"'} data-bs-toggle="tab"><i class="fa fa-dashboard"></i>
+                                            <a href="#dashboad" ${successMess!=null||errorMess!=null?'':'class="active"'} data-bs-toggle="tab"><i class="fa fa-dashboard"></i>
                                                 Dashboard</a>
                                             <a href="#orders" data-bs-toggle="tab"><i class="fa fa-cart-arrow-down"></i> Orders</a>
-                                            <a href="#account-info" data-bs-toggle="tab" ${accChangeMess!=null||passWrong!=null?'class="active"':''}><i class="fa fa-user"></i> Account Details</a>
+                                            <a href="#account-info" data-bs-toggle="tab" ${successMess!=null||errorMess!=null?'class="active"':''}><i class="fa fa-user"></i> Account Details</a>
                                             <a href="${pageContext.request.contextPath}/user?action=logout"><i class="fa fa-sign-out"></i> Logout</a>
                                         </div>
                                     </div>
@@ -85,7 +80,7 @@
                                     <div class="col-lg-9 col-md-8">
                                         <div class="tab-content" id="myaccountContent">
                                             <!-- Single Tab Content Start -->
-                                            <div class="tab-pane fade ${accChangeMess!=null||passWrong!=null?'':'show active'}" id="dashboad" role="tabpanel">
+                                            <div class="tab-pane fade ${successMess!=null||errorMess!=null?'':'show active'}" id="dashboad" role="tabpanel">
                                                 <div class="myaccount-content">
                                                     <h3>Dashboard</h3>
                                                     <div class="welcome">
@@ -135,53 +130,65 @@
                                             </div>
                                             <!-- Single Tab Content End -->
                                             <!-- Single Tab Content Start -->
-                                            <div class="tab-pane fade ${accChangeMess!=null||passWrong!=null?'show active':''}" id="account-info" role="tabpanel">
+                                            <div class="tab-pane fade ${successMess!=null||errorMess!=null?'show active':''}" id="account-info" role="tabpanel">
                                                 <div class="myaccount-content">
                                                     <h3>Account Details</h3>
                                                     <div class="account-details-form">
                                                         <form action="user" id="accountdetailsform">
                                                             <input hidden type="text" name="action" value="changeAccountDetail">
-                                                            <div class="single-input-item">
-                                                                <label for="display-name" class="required">Name</label>
-                                                                <input type="text" name="name" value="${sessionScope.user.user_name}" readonly/>
+                                                            <c:set value="${oldForm==null?sessionScope.user:oldForm}" var="u"></c:set>
+                                                                <div class="single-input-item">
+                                                                    <label for="display-name" class="required">Name</label>
+                                                                    <input type="text" name="name" value="${u.user_name}" readonly required/>
                                                             </div>
                                                             <div class="single-input-item">
                                                                 <label for="email" class="required">Email Address</label>
-                                                                <input type="email" name="email" value="${sessionScope.user.user_email}" readonly/>
+                                                                <input type="text" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Địa chỉ email không đúng định dạng" name="email" value="${u.user_email}" required readonly/>
                                                             </div>
                                                             <div class="single-input-item">
                                                                 <label for="email" class="required">Phone number</label>
-                                                                <input type="phone" name="phone" value="${sessionScope.user.phone}" readonly/>
+                                                                <input type="phone" name="phone" value="${u.phone}" title="Số điện thoại không đúng định dạng" pattern="[0]{1}[0-9]{9}" readonly/>
                                                             </div>
                                                             <div class="single-input-item">
                                                                 <label for="address" class="required">Address</label>
-                                                                <input type="address" name="address" value="${sessionScope.user.address}" readonly/>
+                                                                <input type="address" name="address" value="${u.address}" readonly/>
                                                             </div>
+                                                            <div class="single-input-item">
+                                                                <button type="button" class="check-btn sqr-btn " id="changeToggle1">Changes Details</button>
+                                                                <button type="submit" class="check-btn sqr-btn editButton1" id="saveEdit1" hidden>Save Changes</button>
+                                                                <button type="reset" class="btn-cancel editButton1" id="cancelEdit1" hidden>Cancel</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+                                                    <div class="account-details-form">
+                                                        <form action="user" id="changePassForm">
+                                                            <input hidden type="text" name="action" value="changePass">
                                                             <fieldset>
                                                                 <legend>Password change</legend>
                                                                 <div class="single-input-item">
                                                                     <label for="current-pwd" class="required">Current Password</label>
-                                                                    <input type="password" id="curPass" name="current_pwd" required/>
+                                                                    <input type="password" minlength="5" id="curPass" name="current_pwd" title="Mật khẩu cần trên 5 kí tự" value="${oldCurpass}" required readonly/>
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-lg-6">
                                                                         <div class="single-input-item">
                                                                             <label for="new-pwd" class="required">New Password</label>
-                                                                            <input type="password" id="newpass" name="newpass" readonly/>
+                                                                            <input type="password" minlength="5" id="newpass" value="${oldNewpass}" title="Mật khẩu cần trên 5 kí tự" name="newpass" required readonly/>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-lg-6">
                                                                         <div class="single-input-item">
                                                                             <label for="confirm-pwd" class="required">Confirm Password</label>
-                                                                            <input type="password" id="newrepass" name="newrepass" readonly/>
+                                                                            <input type="password" minlength="5" id="newrepass" name="newrepass" title="Mật khẩu cần trên 5 kí tự" value="${oldNewpass}" required readonly/>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </fieldset>
                                                             <div class="single-input-item">
-                                                                <button type="button" class="check-btn sqr-btn " id="changeToggle">Changes Details</button>
-                                                                <button type="submit" class="check-btn sqr-btn editButton" id="saveEdit" hidden>Save Changes</button>
-                                                                <button type="reset" class="btn-cancel editButton" id="cancelEdit" hidden>Cancel</button>
+                                                                <button type="button" class="check-btn sqr-btn " id="changeToggle2">Changes Password</button>
+                                                                <button type="submit" class="check-btn sqr-btn editButton2" id="saveEdit2" hidden>Save Changes</button>
+                                                                <button type="reset" class="btn-cancel editButton2" id="cancelEdit2" hidden>Cancel</button>
                                                             </div>
                                                         </form>
                                                     </div>
@@ -198,22 +205,22 @@
             <!-- my account wrapper end -->
 
             <jsp:include page="../Common/footer.jsp"></jsp:include>
-            <c:if test="${accChangeMess!=null}">
+            <c:if test="${successMess!=null}">
                 <jsp:include page="../Common/modalMessage.jsp"></jsp:include>
                     <script>
                         window.onload = () => {
-                            $('#modalMessContent').text("${accChangeMess}");
+                            $('#modalMessContent').text("${successMess}");
                             const myModal = new bootstrap.Modal('#myMessModal');
                             myModal.show();
                         };
                 </script>
             </c:if>
-            <c:if test="${passWrong!=null}">
+            <c:if test="${errorMess!=null}">
                 <jsp:include page="../Common/modalMessage.jsp"></jsp:include>
                     <script>
                         window.onload = () => {
-                            $('#modalMessContent').text("${passWrong}");
-                            $('#modalMessContent').attr('class','alert alert-danger');
+                            $('#modalMessContent').text("${errorMess}");
+                            $('#modalMessContent').attr('class', 'alert alert-danger');
                             const myModal = new bootstrap.Modal('#myMessModal');
                             myModal.show();
                         };
@@ -301,16 +308,27 @@
                             $('#modalOrderContent').load("${pageContext.request.contextPath}/user?action=getOrderModal&id=" + ID + " #modalOrderContent");
                             $('#myOrderModal').modal('show');
                         }
-                        $('#changeToggle').on('click', function () {
-                            $('.editButton').attr('hidden', false);
-                            $('#changeToggle').attr('hidden', true);
-                            $('.account-details-form').find('input').attr('readonly', false);
-                            $('.account-details-form').find('input[type=email]').attr('readonly', true);
+                        $('#changeToggle1').on('click', function () {
+                            $('.editButton1').attr('hidden', false);
+                            $('#changeToggle1').attr('hidden', true);
+                            $('.account-details-form').find('input[type!=password]').attr('readonly', false);
                         });
-                        $('#cancelEdit').on('click', function () {
-                            $('.editButton').attr('hidden', true);
-                            $('#changeToggle').attr('hidden', false);
-                            $('.account-details-form').find('input').attr('readonly', true);
+                        $('#changeToggle2').on('click', function () {
+                            $('.editButton2').attr('hidden', false);
+                            $('#changeToggle2').attr('hidden', true);
+                            $('.account-details-form').find('input[type=password]').attr('readonly', false);
+                        });
+                        $('#cancelEdit1').on('click', function () {
+                            $('.editButton1').attr('hidden', true);
+                            $('#changeToggle1').attr('hidden', false);
+                            $('.account-details-form').find('input[type!=password]').attr('readonly', true);
+                            $('.account-details-form').find('input[name=email]').attr('value', '${sessionScope.user.user_email}');
+                        });
+                        $('#cancelEdit2').on('click', function () {
+                            $('.editButton2').attr('hidden', true);
+                            $('#changeToggle2').attr('hidden', false);
+                            $('.account-details-form').find('input[type=password]').attr('readonly', true);
+                            $('.account-details-form').find('input[type=password]').attr('value', '');
                         });
 
                         $('#newpass,#newrepass').on('keyup', function () {
@@ -318,18 +336,20 @@
                             $('.account-details-form').find('#newrepass').attr('required', true);
                             $('.account-details-form').find('#newrepass').get(0).setCustomValidity('');
                         });
-                        $('#saveEdit').on('click', function () {
+                        $('#saveEdit2').on('click', function () {
                             var pass = $('.account-details-form').find('#newpass').val();
                             var repass = $('.account-details-form').find('#newrepass').val();
-                            if (pass !== repass) {
-                                $('.account-details-form').find('#newrepass').get(0).setCustomValidity('Passwords do not match');
+                            if (pass !== repass || pass === '' || repass === '') {
+                                $('.account-details-form').find('#newrepass').get(0).setCustomValidity('Passwords do not match ');
                                 $('.account-details-form').find('#newrepass').get(0).reportValidity();
-
-                            } else {
-                                $('#saveEdit').click();
                             }
                         });
-
+            <c:if test="${oldForm!=null}">
+                        $(' #changeToggle1').click();
+            </c:if>
+            <c:if test="${oldCurpass!=null||oldNewpass!=null}">
+                        $(' #changeToggle2').click();
+            </c:if>
         </script>
         <!-- Main JS -->
         <script src="${pageContext.request.contextPath}/assets/js/main.js"></script>

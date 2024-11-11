@@ -14,13 +14,48 @@
             <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/User/Home.jsp</file>
             <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/assets/js/main.js</file>
         </group>
-        <group name="Prj301-class">
-            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Filter/ExtendFilter.java</file>
-            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/Admin/productInsert.jsp</file>
-            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Filter/MyAccountFilter.java</file>
+        <group name="SWP391">
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Model/Cart.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Controller/OrderServlet.java</file>
             <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/index.jsp</file>
-            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/Admin/orderDetail.jsp</file>
-            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/Admin/product.jsp</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Controller/Admin/ProductManager.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Filter/RoleFilter.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/dal/DBContext.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/dal/ProductDAO.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Model/Size.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Filter/ExtendFilter.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Model/Account.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Controller/CartServlet.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Controller/ProductServlet.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Filter/MyAccountFilter.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/dal/OrderDAO.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/dal/UserDAO.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/WEB-INF/web.xml</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Model/Color.java</file>
+        </group>
+        <group name="Prj301-class">
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/User/loginRegister.jsp</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Controller/OrderServlet.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Controller/user.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Filter/MyAccountFilter.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/User/MyAccount.jsp</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Controller/ProductServlet.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Controller/Home.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/test/Controller/userTest.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/test/Controller/CartServletTest.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Controller/CartServlet.java</file>
+        </group>
+        <group name="test">
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/User/loginRegister.jsp</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Controller/OrderServlet.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Controller/user.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Filter/MyAccountFilter.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/web/View/User/MyAccount.jsp</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Controller/ProductServlet.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Controller/Home.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/test/Controller/userTest.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/test/Controller/CartServletTest.java</file>
+            <file>file:/D:/FPTU/PRJ301/class_projects/Abibas/src/java/Controller/CartServlet.java</file>
         </group>
     </open-files>
 </project-private>

@@ -202,10 +202,11 @@ public class ExtendFilter implements Filter {
                 pw.print("<h1>The resource did not process correctly</h1>\n<pre>\n");
                 pw.print(stackTrace);
                 pw.print("</pre></body>\n</html>"); //NOI18N
+                response.getOutputStream().close();
                 pw.close();
                 ps.close();
-                response.getOutputStream().close();
-            } catch (Exception ex) {
+
+            } catch (IOException ex) {
             }
         } else {
             try {

@@ -1,3 +1,4 @@
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
@@ -161,12 +162,15 @@ public class ProductServlet extends HttpServlet {
         ProductDAO c = new ProductDAO();
         //if not changing the number of product of a page -> set to session value in order to get next page
         //if the session value is null to ->set to default(12)
-        int page, numperpage = request.getParameter("numberPage") == null
-                ? (request.getSession().getAttribute("numberPage") != null ? (int) request.getSession().getAttribute("numberPage") : 12)
-                : Integer.parseInt(request.getParameter("numberPage"));
-
+        int page;
+        int numperpage ;
+        if(request.getParameter("numberPage") == null){
+            numperpage = request.getSession().getAttribute("numberPage") != null ? (int) request.getSession().getAttribute("numberPage") : 12;
+        }else{
+            numperpage = Integer.parseInt(request.getParameter("numberPage"));
+        }
         int size = productList.size();
-        int num = (size % numperpage == 0 ? (size / numperpage) : ((size / numperpage)) + 1);//so trang
+        int num = (size % numperpage == 0 ? (size / numperpage) : (size / numperpage) + 1);//so trang
         if (num == 0) {
             num = 1;
         }

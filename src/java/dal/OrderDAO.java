@@ -11,14 +11,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
  *
  * @author HP
  */
-public class OrderDAO extends DBContext {
+public class OrderDAO extends DBContext  {
 
     public void addOrder(Order order) {
         String sqlOrder = """
@@ -76,8 +75,11 @@ public class OrderDAO extends DBContext {
                 pdao.updateProduct(new Product(p.getProductID(), p.getProductName(), p.getProductImg(), 0,
                         p.getProductPriceFloat(), p.getProductDescription(), p.getCate()));
                 }else{
-                    pdao.updateProduct(new Product(p.getProductID(), p.getProductName(), p.getProductImg(), p.getProductQuantity()-i.getQuantity(),
-                        p.getProductPriceFloat(), p.getProductDescription(), p.getCate()));
+                    Product temp = new Product(p.getProductID(), p.getProductName(), p.getProductImg(), p.getProductQuantity()-i.getQuantity(),
+                        p.getProductPriceFloat(), p.getProductDescription(), p.getCate());
+                    temp.setColor(pdao.getColorByID(p.getProductID()));
+                    temp.setSize(pdao.getSizeByID(p.getProductID()));
+                    pdao.updateProduct(temp);
                 }
                 PreparedStatement pre2 = connection.prepareStatement(sqlDetail);
                 pre2.setInt(1, i.getQuantity());

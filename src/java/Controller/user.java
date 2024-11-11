@@ -1,3 +1,5 @@
+// This is a personal academic project. Dear PVS-Studio, please check it.
+// PVS-Studio Static Code Analyzer for C, C++, C#, and Java: http://www.viva64.com
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
@@ -42,7 +44,7 @@ public class user extends HttpServlet {
         String action = request.getParameter("action");
         if (action == null) {
             String Mess = request.getParameter("errorMess");
-            if(Mess!=null){
+            if (Mess != null) {
                 request.setAttribute("errorMessage", Mess);
             }
             request.getRequestDispatcher("View/User/loginRegister.jsp").forward(request, response);
@@ -54,12 +56,14 @@ public class user extends HttpServlet {
                 UserDAO dao = new UserDAO();
 
                 Account user = dao.getUser(email, password);
-
-                if (user == null) {
-                    request.setAttribute("errorMessage", "Tài khoản không tồn tại!");
+                if (email == null || password == null || email.isBlank() || password.isBlank()) {
+                    request.setAttribute("errorMessage", "Vui lòng điền tài khoản và mật khẩu!");
                     request.getRequestDispatcher("View/User/loginRegister.jsp").forward(request, response);
                 } else {
-                    if (email.equals(user.getUser_email()) && password.equals(user.getUser_pass())) {
+                    if (user == null) {
+                        request.setAttribute("errorMessage", "Tài khoản hoặc mật khẩu không đúng!");
+                        request.getRequestDispatcher("View/User/loginRegister.jsp").forward(request, response);
+                    } else {
                         Cookie user_email = new Cookie("email", email);
                         Cookie pass = new Cookie("pass", password);
                         Cookie r = new Cookie("rem", rem);
@@ -79,11 +83,8 @@ public class user extends HttpServlet {
                         if (!user.isIsAdmin()) {
                             response.sendRedirect(request.getContextPath() + "/Home");
                         } else {
-                        response.sendRedirect(request.getContextPath() + "/dashboard");
+                            response.sendRedirect(request.getContextPath() + "/dashboard");
                         }
-                    } else {
-                        request.setAttribute("errorMessage", "Tài khoản hoặc mật khẩu không đúng!");
-                        request.getRequestDispatcher("View/User/loginRegister.jsp").forward(request, response);
                     }
                 }
             }
@@ -110,17 +111,15 @@ public class user extends HttpServlet {
             }
             if (action.equals("accountDetail")) {
                 String idRaw = request.getParameter("id");
-                
-                if(idRaw==null||idRaw.isBlank()){
-                    response.sendRedirect(request.getContextPath()+"/user?errorMess=Please login first!");
+
+                if (idRaw == null || idRaw.isBlank()) {
+                    response.sendRedirect(request.getContextPath() + "/user?errorMess=Please login first!");
                 }
-                String changeMess = request.getParameter("changeMess");
-                if (changeMess != null) {
-                    if (changeMess.equals("true")) {
-                        request.setAttribute("accChangeMess", "Thay đổi đã được lưu!!");
-                    } else {
-                        request.setAttribute("passWrong", "Sai mật khẩu!!");
-                    }
+                String successMess = request.getParameter("successMess");
+
+                if (successMess != null) {
+                    request.setAttribute("successMess", successMess);
+
                 }
                 try {
                     int id = Integer.parseInt(idRaw);
@@ -129,6 +128,7 @@ public class user extends HttpServlet {
                     request.setAttribute("orders", orders);
                     request.getRequestDispatcher("View/User/MyAccount.jsp").forward(request, response);
                 } catch (NumberFormatException e) {
+                    throw new ServletException(e);
                 }
             }
             if (action.equals("getOrderModal")) {
@@ -147,26 +147,50 @@ public class user extends HttpServlet {
                 String name = request.getParameter("name");
                 String phone = request.getParameter("phone");
                 String address = request.getParameter("address");
+                String newEmail = request.getParameter("email");
+                UserDAO dao = new UserDAO();
+                Account curUser = (Account) request.getSession().getAttribute("user");
+                Account account = new Account(curUser.getUser_id(), name, newEmail, curUser.getUser_pass(), curUser.isIsAdmin(),
+                        address, phone);
+                if (newEmail.equals(curUser.getUser_email())) {
+                    dao.updateUser(account);
+                    request.getSession().setAttribute("user", account);
+                    response.sendRedirect(request.getContextPath() + "/user?action=accountDetail&successMess=Change Saved!&id=" + curUser.getUser_id());
+                } else {
+                    if (!dao.checkEmailExisted(newEmail)) {
+                        dao.updateUser(account);
+                        request.getSession().setAttribute("user", account);
+                        response.sendRedirect(request.getContextPath() + "/user?action=accountDetail&successMess=Change Saved!&id=" + curUser.getUser_id());
+                    } else {
+                        request.setAttribute("oldForm", account);
+                        request.setAttribute("errorMess", "Email is already existed");
+                        OrderDAO odao = new OrderDAO();
+                        List<Order> orders = odao.getOrderByUserID(curUser.getUser_id());
+                        request.setAttribute("orders", orders);
+                        request.getRequestDispatcher("View/User/MyAccount.jsp").forward(request, response);
+                        request.getRequestDispatcher("View/User/MyAccount.jsp").forward(request, response);
+                    }
+                }
+            }
+            if (action.equals("changePass")) {
                 String curPass = request.getParameter("current_pwd");
                 String newpass = request.getParameter("newpass");
                 UserDAO dao = new UserDAO();
                 Account curUser = (Account) request.getSession().getAttribute("user");
+                Account account = new Account(curUser.getUser_id(), curUser.getUser_name(), curUser.getUser_email(), newpass, curUser.isIsAdmin(),
+                        curUser.getAddress(), curUser.getPhone());
                 if (curUser.getUser_pass().equals(curPass)) {
-                    if (null != newpass && !newpass.isEmpty()) {
-                        Account account = new Account(curUser.getUser_id(), name, curUser.getUser_email(), newpass, curUser.isIsAdmin(),
-                                address, phone);
-                        dao.updateUser(account);
-                        request.getSession().setAttribute("user", account);
-                        response.sendRedirect(request.getContextPath()+"/user?action=accountDetail&id="+curUser.getUser_id());
-                    } else {
-                        Account account = new Account(curUser.getUser_id(), name, curUser.getUser_email(), curUser.getUser_pass(), curUser.isIsAdmin(),
-                                address, phone);
-                        dao.updateUser(account);
-                        request.getSession().setAttribute("user", account);
-                        response.sendRedirect(request.getContextPath() + "/user?action=accountDetail&changeMess=true&id=" + curUser.getUser_id());
-                    }
+                    dao.updateUser(account);
+                    request.getSession().setAttribute("user", account);
+                    response.sendRedirect(request.getContextPath() + "/user?action=accountDetail&&successMess=Password Changed!&id=" + curUser.getUser_id());
                 } else {
-                    response.sendRedirect(request.getContextPath() + "/user?action=accountDetail&changeMess=false&id=" + curUser.getUser_id());
+                    request.setAttribute("oldCurpass", curPass);
+                    request.setAttribute("oldNewpass", newpass);
+                    request.setAttribute("errorMess", "Password is wrong");
+                    OrderDAO odao = new OrderDAO();
+                    List<Order> orders = odao.getOrderByUserID(curUser.getUser_id());
+                    request.setAttribute("orders", orders);
+                    request.getRequestDispatcher("View/User/MyAccount.jsp").forward(request, response);
                 }
             }
         }

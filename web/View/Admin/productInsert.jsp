@@ -238,19 +238,16 @@
                             </div>
 
                             <div class="form-group col-md-12" >
-                                <form action="productmanager">
-                                    <input type="text" hidden name="action" value="insertCategory">
                                     <h2 style="color: red; padding-left: 10px">
                                         ${error}</h2>
                                     <label class="control-label">Nhập tên danh mục mới</label>
-                                    <form action="productmanager?action=insertcategory" method="post"> 
+                                    <form action="productmanager?action=insertCategory" method="post"> 
                                         <input class="form-control" type="text" name="name" required>
                                         <br>
                                         <button class="btn btn-save" type="submit">Lưu lại</button>
                                         <a class="btn btn-cancel" data-bs-dismiss="modal" href="#">Hủy bỏ</a>
                                     </form>
                             </div>
-                            </form>
                             <div class="form-group col-md-12">
                                 <label class="control-label">Danh mục sản phẩm hiện đang có</label>
                                 <ul style="padding-left: 20px;">

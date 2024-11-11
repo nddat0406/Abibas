@@ -172,7 +172,7 @@
                                                 <div class="col-lg-12 col-md-12">
                                                     <div class="billing-info mb-20">
                                                         <label>Email Address <abbr class="required" title="required">*</abbr></label>
-                                                        <input type="text" name="email" placeholder="Your Email" value="${sessionScope.user.user_email}" required="true">
+                                                        <input type="text" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Địa chỉ email không đúng định dạng" name="email" placeholder="Your Email" value="${sessionScope.user.user_email}" required="true">
                                                     </div>
                                                 </div>
                                             </div>

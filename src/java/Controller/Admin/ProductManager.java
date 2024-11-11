@@ -9,6 +9,7 @@ import Model.Category;
 import Model.Color;
 import Model.Product;
 import Model.Size;
+import dal.DBContext;
 import dal.ProductDAO;
 import java.io.IOException;
 import jakarta.servlet.ServletException;
@@ -18,6 +19,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -126,6 +129,7 @@ public class ProductManager extends HttpServlet {
                             list.add(s);
                         }
                     } catch (Exception e) {
+                        Logger.getLogger(Exception.class.getName()).log(Level.SEVERE, null, e);
                     }
                     // color
                     List<Color> list2 = new ArrayList<>();
@@ -135,6 +139,7 @@ public class ProductManager extends HttpServlet {
                             list2.add(s1);
                         }
                     } catch (Exception e) {
+                       Logger.getLogger(Exception.class.getName()).log(Level.SEVERE, null, e);
                     }
 
                     Product product = new Product();
@@ -194,6 +199,7 @@ public class ProductManager extends HttpServlet {
                             list.add(s);
                         }
                     } catch (Exception e) {
+                        
                     }
                     // color
                     List<Color> list2 = new ArrayList<>();

@@ -43,10 +43,7 @@
         <filter-name>RoleFilter</filter-name>
         <url-pattern>/productmanager</url-pattern>
     </filter-mapping>
-    
-    
-    
-    
+
     <servlet>
         <servlet-name>user</servlet-name>
         <servlet-class>Controller.user</servlet-class>
@@ -122,4 +119,5 @@
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
+    
 </web-app>
